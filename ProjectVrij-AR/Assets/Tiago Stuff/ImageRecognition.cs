@@ -14,13 +14,15 @@ public class ImageRecognition : MonoBehaviour
 
     private void Awake()
     {
-        imageManager = FindObjectOfType<ARTrackedImageManager>();
+        imageManager = GetComponent<ARTrackedImageManager>();
 
         foreach (GameObject prefab in placeAblePrefabs)
         {
             GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
             newPrefab.name = prefab.name;
+            newPrefab.AddComponent<ARAnchor>();
             spawnedPrefab.Add(newPrefab.name, newPrefab);
+            newPrefab.SetActive(false);
         }
     }
 
@@ -36,15 +38,15 @@ public class ImageRecognition : MonoBehaviour
 
     public void OnImageChanged(ARTrackedImagesChangedEventArgs args)
     {
-        foreach (var trackedImage in args.added)
-        {
-           UpdateImage(trackedImage);
-        }
-        foreach (var trackedImage in args.updated)
+        foreach (ARTrackedImage trackedImage in args.added)
         {
             UpdateImage(trackedImage);
         }
-        foreach (var trackedImage in args.removed)
+        foreach (ARTrackedImage trackedImage in args.updated)
+        {
+            UpdateImage(trackedImage);
+        }
+        foreach (ARTrackedImage trackedImage in args.removed)
         {
             spawnedPrefab[trackedImage.name].SetActive(false);
         }
@@ -57,7 +59,16 @@ public class ImageRecognition : MonoBehaviour
         Vector3 position = trackedImage.transform.position; 
 
         GameObject prefab = spawnedPrefab[name];
-        prefab.transform.position = position;
+        prefab.transform.position = new Vector3(0,-10,0);
         prefab.SetActive(true);
+
+        foreach(GameObject go in spawnedPrefab.Values) 
+        {
+            if (go.name != name) 
+            {
+                go.SetActive(false);    
+            
+            }           
+        }
     }
 }
