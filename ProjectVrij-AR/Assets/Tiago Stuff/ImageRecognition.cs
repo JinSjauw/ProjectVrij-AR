@@ -59,7 +59,7 @@ public class ImageRecognition : MonoBehaviour
         Vector3 position = trackedImage.transform.position; 
 
         GameObject prefab = spawnedPrefab[name];
-        prefab.transform.position = new Vector3(0,-10,0);
+        prefab.transform.position = position;
         prefab.SetActive(true);
 
         foreach(GameObject go in spawnedPrefab.Values) 
