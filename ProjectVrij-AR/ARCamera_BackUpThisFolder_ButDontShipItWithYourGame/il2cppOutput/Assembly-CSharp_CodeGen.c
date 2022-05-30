@@ -44,7 +44,27 @@ extern void ARFeatheredPlaneMeshVisualizer_GenerateBoundaryUVs_mF756D3C1F7925A69
 extern void ARFeatheredPlaneMeshVisualizer__ctor_m9A77651BCAE58AA0B994FFF6C6B63B1CFF2729F6 (void);
 // 0x00000010 System.Void ARFeatheredPlaneMeshVisualizer::.cctor()
 extern void ARFeatheredPlaneMeshVisualizer__cctor_mF4BA6DDB611A3FD966C8B9494AE6B3EB8647CEAD (void);
-static Il2CppMethodPointer s_methodPointers[16] = 
+// 0x00000011 System.Void PlayerInput::Start()
+extern void PlayerInput_Start_m13D14749E9E64A1DDBA8E2FCD69CA3CC84BFB576 (void);
+// 0x00000012 System.Void PlayerInput::Update()
+extern void PlayerInput_Update_m14D8C785B78BF2B56136439760751770928442BA (void);
+// 0x00000013 System.Void PlayerInput::UpdateInput()
+extern void PlayerInput_UpdateInput_m9896C0E011942D1456566FB5CD7C6F4F9C90CC90 (void);
+// 0x00000014 System.Void PlayerInput::.ctor()
+extern void PlayerInput__ctor_m24FD924FB39A9A023CDEA8F6916EEC47B471B3A8 (void);
+// 0x00000015 System.Void SpawnableManager::Start()
+extern void SpawnableManager_Start_mFC8BFB2C5F789510DC84AD28B8BF57D00291CDED (void);
+// 0x00000016 System.Void SpawnableManager::Update()
+extern void SpawnableManager_Update_m7A9A38650830610C5C81A77D22ABB3A011E23220 (void);
+// 0x00000017 System.Void SpawnableManager::PlaceObject()
+extern void SpawnableManager_PlaceObject_m1E02B94998520AD599F64F0279CD5E194BDF92A2 (void);
+// 0x00000018 System.Void SpawnableManager::Scale(System.Single)
+extern void SpawnableManager_Scale_m2AA550687CE369F76BFC98A88A3ED5CE8A6CC4A3 (void);
+// 0x00000019 System.Collections.Generic.List`1<UnityEngine.GameObject> SpawnableManager::getSpawnedList()
+extern void SpawnableManager_getSpawnedList_m585C92B7EDE6280C283C069A3C2D1D6580561A3C (void);
+// 0x0000001A System.Void SpawnableManager::.ctor()
+extern void SpawnableManager__ctor_m5E989BEEF4E8A6A12828E117976ED1043ACAA1ED (void);
+static Il2CppMethodPointer s_methodPointers[26] = 
 {
 	AnchorCreator_get_AnchorPrefab_mBBAF7805E9D9F8D79408EE642D153BC76306B25A,
 	AnchorCreator_set_AnchorPrefab_m53CC9CC3022C713826B44536B48B462C8A1FACFF,
@@ -62,31 +82,52 @@ static Il2CppMethodPointer s_methodPointers[16] =
 	ARFeatheredPlaneMeshVisualizer_GenerateBoundaryUVs_mF756D3C1F7925A69CD8C7C8CCE56209AB321FEF5,
 	ARFeatheredPlaneMeshVisualizer__ctor_m9A77651BCAE58AA0B994FFF6C6B63B1CFF2729F6,
 	ARFeatheredPlaneMeshVisualizer__cctor_mF4BA6DDB611A3FD966C8B9494AE6B3EB8647CEAD,
+	PlayerInput_Start_m13D14749E9E64A1DDBA8E2FCD69CA3CC84BFB576,
+	PlayerInput_Update_m14D8C785B78BF2B56136439760751770928442BA,
+	PlayerInput_UpdateInput_m9896C0E011942D1456566FB5CD7C6F4F9C90CC90,
+	PlayerInput__ctor_m24FD924FB39A9A023CDEA8F6916EEC47B471B3A8,
+	SpawnableManager_Start_mFC8BFB2C5F789510DC84AD28B8BF57D00291CDED,
+	SpawnableManager_Update_m7A9A38650830610C5C81A77D22ABB3A011E23220,
+	SpawnableManager_PlaceObject_m1E02B94998520AD599F64F0279CD5E194BDF92A2,
+	SpawnableManager_Scale_m2AA550687CE369F76BFC98A88A3ED5CE8A6CC4A3,
+	SpawnableManager_getSpawnedList_m585C92B7EDE6280C283C069A3C2D1D6580561A3C,
+	SpawnableManager__ctor_m5E989BEEF4E8A6A12828E117976ED1043ACAA1ED,
 };
-static const int32_t s_InvokerIndices[16] = 
+static const int32_t s_InvokerIndices[26] = 
 {
-	2040,
-	1718,
-	2072,
-	2072,
-	2072,
-	2072,
-	3836,
-	2061,
-	1735,
-	2072,
-	2072,
-	2072,
-	1663,
-	1718,
-	2072,
-	3836,
+	2091,
+	1748,
+	2123,
+	2123,
+	2123,
+	2123,
+	3935,
+	2112,
+	1765,
+	2123,
+	2123,
+	2123,
+	1693,
+	1748,
+	2123,
+	3935,
+	2123,
+	2123,
+	2123,
+	2123,
+	2123,
+	2123,
+	2123,
+	1765,
+	2091,
+	2123,
 };
+extern const Il2CppDebuggerMetadataRegistration g_DebuggerMetadataRegistrationAssemblyU2DCSharp;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	16,
+	26,
 	s_methodPointers,
 	0,
 	NULL,
@@ -97,7 +138,7 @@ const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule =
 	NULL,
 	0,
 	NULL,
-	NULL,
+	&g_DebuggerMetadataRegistrationAssemblyU2DCSharp,
 	NULL, // module initializer,
 	NULL,
 	NULL,
