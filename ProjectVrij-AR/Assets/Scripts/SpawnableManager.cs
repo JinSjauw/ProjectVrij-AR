@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using TMPro;
 
 public class SpawnableManager : MonoBehaviour
 {
+
+    public TextMeshProUGUI debugLog;
     [SerializeField]
     ARRaycastManager raycastManager;
     List<ARRaycastHit> hitList = new List<ARRaycastHit>();
-    List<GameObject> spawnedList;
+    List<GameObject> spawnedList = new List<GameObject>();
     [SerializeField]
     GameObject spawnablePrefab;
 
@@ -36,6 +39,7 @@ public class SpawnableManager : MonoBehaviour
         //Tapping
         if(Input.touchCount == 1) 
         {
+            debugLog.text = "TAPPING";
             if (raycastManager.Raycast(Input.GetTouch(0).position, hitList))
             {
                 if (Input.GetTouch(0).phase == TouchPhase.Began && spawnedObject == null)
@@ -43,15 +47,9 @@ public class SpawnableManager : MonoBehaviour
                     RaycastHit hit;
                     if (Physics.Raycast(arCam.transform.position, arCam.transform.forward, out hit))
                     {
-                        if (hit.collider.gameObject.tag == "Spawnable")
-                        {
-                            spawnedObject = hit.collider.gameObject;
-                        }
-                        else
-                        {
                             GameObject gameObject = Instantiate(spawnablePrefab, hitList[0].pose.position, Quaternion.identity);
                             spawnedList.Add(gameObject);
-                        }
+                            debugLog.text = "SPAWNING";
                     }
                     else if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null)
                     {
@@ -69,6 +67,7 @@ public class SpawnableManager : MonoBehaviour
 
         if (Input.touchCount == 2)
         {
+            debugLog.text = "PINCHING";
             Debug.Log("PINCHING");
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
@@ -81,15 +80,15 @@ public class SpawnableManager : MonoBehaviour
 
             float difference = currentMagnitude - prevMagnitude;
 
-            Scale(difference * 0.001f);
-
+            Scale(difference * 0.05f + 1f);
         }
     }
     void Scale(float scaling)
     {
-
+        debugLog.text = "SCALING" + spawnedList.Count.ToString();
         foreach (GameObject gameObject in spawnedList)
         {
+            debugLog.text = "scaling: " + scaling;
             gameObject.transform.localScale *= scaling;
         }
 
