@@ -50,15 +50,17 @@ extern void PlayerInput__ctor_m24FD924FB39A9A023CDEA8F6916EEC47B471B3A8 (void);
 extern void SpawnableManager_Start_mFC8BFB2C5F789510DC84AD28B8BF57D00291CDED (void);
 // 0x00000013 System.Void SpawnableManager::Update()
 extern void SpawnableManager_Update_m7A9A38650830610C5C81A77D22ABB3A011E23220 (void);
-// 0x00000014 System.Void SpawnableManager::PlaceObject()
-extern void SpawnableManager_PlaceObject_m1E02B94998520AD599F64F0279CD5E194BDF92A2 (void);
+// 0x00000014 System.Void SpawnableManager::PlaceObject(UnityEngine.XR.ARFoundation.ARAnchor)
+extern void SpawnableManager_PlaceObject_m2091B48B1860476E6F22950C14A81981E3F28265 (void);
 // 0x00000015 System.Void SpawnableManager::Scale(System.Single)
 extern void SpawnableManager_Scale_m2AA550687CE369F76BFC98A88A3ED5CE8A6CC4A3 (void);
-// 0x00000016 System.Collections.Generic.List`1<UnityEngine.GameObject> SpawnableManager::getSpawnedList()
+// 0x00000016 System.Void SpawnableManager::HandleInput()
+extern void SpawnableManager_HandleInput_mECA73486AF93BDA526960C67048E2674C46D78B1 (void);
+// 0x00000017 System.Collections.Generic.List`1<UnityEngine.GameObject> SpawnableManager::getSpawnedList()
 extern void SpawnableManager_getSpawnedList_m585C92B7EDE6280C283C069A3C2D1D6580561A3C (void);
-// 0x00000017 System.Void SpawnableManager::.ctor()
+// 0x00000018 System.Void SpawnableManager::.ctor()
 extern void SpawnableManager__ctor_m5E989BEEF4E8A6A12828E117976ED1043ACAA1ED (void);
-static Il2CppMethodPointer s_methodPointers[23] = 
+static Il2CppMethodPointer s_methodPointers[24] = 
 {
 	AnchorCreator_get_AnchorPrefab_mBBAF7805E9D9F8D79408EE642D153BC76306B25A,
 	AnchorCreator_set_AnchorPrefab_m53CC9CC3022C713826B44536B48B462C8A1FACFF,
@@ -79,12 +81,13 @@ static Il2CppMethodPointer s_methodPointers[23] =
 	PlayerInput__ctor_m24FD924FB39A9A023CDEA8F6916EEC47B471B3A8,
 	SpawnableManager_Start_mFC8BFB2C5F789510DC84AD28B8BF57D00291CDED,
 	SpawnableManager_Update_m7A9A38650830610C5C81A77D22ABB3A011E23220,
-	SpawnableManager_PlaceObject_m1E02B94998520AD599F64F0279CD5E194BDF92A2,
+	SpawnableManager_PlaceObject_m2091B48B1860476E6F22950C14A81981E3F28265,
 	SpawnableManager_Scale_m2AA550687CE369F76BFC98A88A3ED5CE8A6CC4A3,
+	SpawnableManager_HandleInput_mECA73486AF93BDA526960C67048E2674C46D78B1,
 	SpawnableManager_getSpawnedList_m585C92B7EDE6280C283C069A3C2D1D6580561A3C,
 	SpawnableManager__ctor_m5E989BEEF4E8A6A12828E117976ED1043ACAA1ED,
 };
-static const int32_t s_InvokerIndices[23] = 
+static const int32_t s_InvokerIndices[24] = 
 {
 	6370,
 	5184,
@@ -105,8 +108,9 @@ static const int32_t s_InvokerIndices[23] =
 	6491,
 	6491,
 	6491,
-	6491,
+	5184,
 	5237,
+	6491,
 	6370,
 	6491,
 };
@@ -114,7 +118,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	23,
+	24,
 	s_methodPointers,
 	0,
 	NULL,

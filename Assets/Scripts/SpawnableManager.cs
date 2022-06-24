@@ -8,8 +8,9 @@ public class SpawnableManager : MonoBehaviour
 {
 
     public TextMeshProUGUI debugLog;
-    [SerializeField]
-    ARRaycastManager raycastManager;
+    [SerializeField] ARRaycastManager raycastManager;
+    [SerializeField] ARAnchorManager anchorManager;
+
     List<ARRaycastHit> hitList = new List<ARRaycastHit>();
     List<GameObject> spawnedList = new List<GameObject>();
     [SerializeField]
@@ -28,16 +29,38 @@ public class SpawnableManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlaceObject();
+        HandleInput();
     }
 
-    void PlaceObject() 
+    void PlaceObject(ARAnchor roomAnchor) 
+    {
+        GameObject gameObject = Instantiate(spawnablePrefab, hitList[0].pose.position, Quaternion.identity);
+        if (gameObject.GetComponent<ARAnchor>() == null) 
+        {
+            gameObject.transform.SetParent(roomAnchor.transform);
+        }
+
+        spawnedList.Add(gameObject);
+        debugLog.text = "SPAWNING";
+    }
+    void Scale(float scaling)
+    {
+        debugLog.text = "SCALING" + spawnedList.Count.ToString();
+        foreach (GameObject gameObject in spawnedList)
+        {
+            debugLog.text = "scaling: " + scaling;
+            gameObject.transform.localScale *= scaling;
+        }
+
+    }
+
+    void HandleInput() 
     {
         if (Input.touchCount == 0)
             return;
 
         //Tapping
-        if(Input.touchCount == 1) 
+        if (Input.touchCount == 1)
         {
             debugLog.text = "TAPPING";
             if (raycastManager.Raycast(Input.GetTouch(0).position, hitList))
@@ -47,14 +70,18 @@ public class SpawnableManager : MonoBehaviour
                     RaycastHit hit;
                     if (Physics.Raycast(arCam.transform.position, arCam.transform.forward, out hit))
                     {
-                            GameObject gameObject = Instantiate(spawnablePrefab, hitList[0].pose.position, Quaternion.identity);
-                            spawnedList.Add(gameObject);
-                            debugLog.text = "SPAWNING";
+                        if (spawnedList.Count < 1) 
+                        {
+                            ARAnchor roomAnchor = anchorManager.AttachAnchor(hitList[0].trackable.GetComponent<ARPlane>(), hitList[0].pose);
+                            debugLog.text = roomAnchor.ToString() + "ROOMANCHOR";
+                            if (roomAnchor != null) 
+                            {
+                                PlaceObject(roomAnchor);
+                            }
+                        }
+                        
                     }
-                    else if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null)
-                    {
-                        spawnedObject.transform.position = hitList[0].pose.position;
-                    }
+          
                     if (Input.GetTouch(0).phase == TouchPhase.Ended)
                     {
                         spawnedObject = null;
@@ -62,9 +89,8 @@ public class SpawnableManager : MonoBehaviour
                 }
             }
         }
-        
-        //Pinching
 
+        //Pinching
         if (Input.touchCount == 2)
         {
             debugLog.text = "PINCHING";
@@ -82,16 +108,6 @@ public class SpawnableManager : MonoBehaviour
 
             Scale(difference * 0.05f + 1f);
         }
-    }
-    void Scale(float scaling)
-    {
-        debugLog.text = "SCALING" + spawnedList.Count.ToString();
-        foreach (GameObject gameObject in spawnedList)
-        {
-            debugLog.text = "scaling: " + scaling;
-            gameObject.transform.localScale *= scaling;
-        }
-
     }
 
     public List<GameObject> getSpawnedList() 

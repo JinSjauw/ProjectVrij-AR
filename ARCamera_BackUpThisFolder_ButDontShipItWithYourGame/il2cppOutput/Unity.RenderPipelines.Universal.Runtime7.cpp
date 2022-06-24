@@ -20320,7 +20320,7 @@ IL_03ff:
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_093c:
+FINALLY_0952:
 			{// begin finally (depth: 1)
 				ProfilingScope_Dispose_m4231A2ACA1F8E345BB0078310A9F7601704C8BE4((&V_11), NULL);
 				return;
@@ -21192,8 +21192,16 @@ IL_0922_1:
 
 IL_093a_1:
 			{
+				// cmd.ReleaseTemporaryRT(m_InternalLut.id);
+				U3CU3Ec__DisplayClass59_0_t88753AB174063F0A92D3656540A1E2863E33261D L_367 = V_0;
+				CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_368 = L_367.___cmd_3;
+				RenderTargetHandle_tB5C2670041BF377223D41FDF9290F6D8BFB7BA66* L_369 = (&__this->___m_InternalLut_29);
+				int32_t L_370;
+				L_370 = RenderTargetHandle_get_id_m4D50FDA4A486E05D07A54ABFC04BD96C1CE7D7BE_inline(L_369, NULL);
+				NullCheck(L_368);
+				CommandBuffer_ReleaseTemporaryRT_m4651A4B373DF432AA44F06A6F20852ED5996CC8E(L_368, L_370, NULL);
 				// }
-				goto IL_094a;
+				goto IL_0960;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -21202,7 +21210,7 @@ IL_093a_1:
 		}
 	}
 
-IL_094a:
+IL_0960:
 	{
 		// }
 		return;
