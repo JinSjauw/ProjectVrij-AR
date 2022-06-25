@@ -3171,7 +3171,7 @@ MonoBehaviour:
   numbers: {fileID: 296381582}
   raycastManager: {fileID: 1659859601}
   anchorManager: {fileID: 1659859602}
-  spawnablePrefab: {fileID: 6184970418655097531, guid: b430e15d113bdf04aa8458e570ac29d0,
+  spawnablePrefab: {fileID: 8236176550694436385, guid: 9977d057e2ebb674faa6abd11053fd5d,
     type: 3}
   numberLock: {fileID: 733461959}
   exitButton: {fileID: 0}
