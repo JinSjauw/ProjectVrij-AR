@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using TMPro;
+using UnityEngine.UI;
 
 public class SpawnableManager : MonoBehaviour
 {
 
     public TextMeshProUGUI debugLog;
+    public TextMeshProUGUI numbers;
     [SerializeField] ARRaycastManager raycastManager;
     [SerializeField] ARAnchorManager anchorManager;
 
     List<ARRaycastHit> hitList = new List<ARRaycastHit>();
     List<GameObject> spawnedList = new List<GameObject>();
-    [SerializeField]
-    GameObject spawnablePrefab;
+    [SerializeField] GameObject spawnablePrefab;
+    [SerializeField] GameObject numberLock;
+    [SerializeField] Button exitButton;
 
     Camera arCam;
     GameObject spawnedObject;
@@ -24,12 +27,24 @@ public class SpawnableManager : MonoBehaviour
     {
         spawnedObject = null;
         arCam = FindObjectOfType<Camera>();
+        //exitButton.onClick.AddListener(Dismiss);
+        PushTheButton.ButtonPressed += AddDigit;
     }
     
     // Update is called once per frame
     void Update()
     {
         HandleInput();
+        if (numbers.text == "1234" && numbers.text.Length == 4)
+        {
+            //Open Door.
+            numbers.text = "Correct";
+            //numberLock.SetActive(false);
+        }
+        else if (numbers.text.Length >= 4) 
+        {
+            numbers.text = "";
+        }
     }
 
     void PlaceObject(ARAnchor roomAnchor) 
@@ -54,6 +69,17 @@ public class SpawnableManager : MonoBehaviour
 
     }
 
+    private void AddDigit(string digit)
+    {
+        numbers.text += digit;
+    }
+
+    private void Dismiss()
+    {
+        numberLock.SetActive(false);
+    } 
+
+
     void HandleInput() 
     {
         if (Input.touchCount == 0)
@@ -62,29 +88,43 @@ public class SpawnableManager : MonoBehaviour
         //Tapping
         if (Input.touchCount == 1)
         {
-            debugLog.text = "TAPPING";
+            //debugLog.text = "TAPPING";
             if (raycastManager.Raycast(Input.GetTouch(0).position, hitList))
             {
-                if (Input.GetTouch(0).phase == TouchPhase.Began && spawnedObject == null)
+                if (Input.GetTouch(0).phase == TouchPhase.Began)
                 {
                     RaycastHit hit;
-                    if (Physics.Raycast(arCam.transform.position, arCam.transform.forward, out hit))
+                    Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
+                    
+                    if (spawnedObject == null)
                     {
-                        if (spawnedList.Count < 1) 
+                        if (Physics.Raycast(arCam.transform.position, arCam.transform.forward, out hit))
                         {
-                            ARAnchor roomAnchor = anchorManager.AttachAnchor(hitList[0].trackable.GetComponent<ARPlane>(), hitList[0].pose);
-                            debugLog.text = roomAnchor.ToString() + "ROOMANCHOR";
-                            if (roomAnchor != null) 
+                            debugLog.text = hit.transform.name;
+                            if (spawnedList.Count < 1)
                             {
-                                PlaceObject(roomAnchor);
+                                ARAnchor roomAnchor = anchorManager.AttachAnchor(hitList[0].trackable.GetComponent<ARPlane>(), hitList[0].pose);
+                                debugLog.text = roomAnchor.ToString() + "ROOMANCHOR";
+                                if (roomAnchor != null)
+                                {
+                                    PlaceObject(roomAnchor);
+                                }
                             }
                         }
-                        
+                        if (Input.GetTouch(0).phase == TouchPhase.Ended)
+                        {
+                            spawnedObject = null;
+                        }
                     }
-          
-                    if (Input.GetTouch(0).phase == TouchPhase.Ended)
+                    if (Physics.Raycast(ray, out hit))
                     {
-                        spawnedObject = null;
+                        NumberLock aLock = hit.transform.GetComponent<NumberLock>();
+
+                        if (aLock != null) 
+                        {
+                            numberLock.SetActive(true);
+                            //debugLog.text = "NOT NULL";
+                        }
                     }
                 }
             }
