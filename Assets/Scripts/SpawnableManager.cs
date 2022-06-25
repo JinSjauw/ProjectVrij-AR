@@ -28,7 +28,16 @@ public class SpawnableManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+
+        if (this.spawnedList.Count > 1) 
+        {
+            debugLog.text = "Position Object: " + "X: " + this.spawnedList[0].transform.position.x + " Y: " + this.spawnedList[0].transform.position.y + " Z: " + this.spawnedList[0].transform.position.z;
+            return;
+        }
+
         PlaceObject();
+
     }
 
     void PlaceObject() 
