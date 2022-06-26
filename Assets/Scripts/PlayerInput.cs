@@ -17,7 +17,6 @@ public class PlayerInput : MonoBehaviour
 
     bool hasSpawned = false;
     List<ARRaycastHit> hitList = new List<ARRaycastHit>();
-
     public TextMeshProUGUI debugLog;
     public TextMeshProUGUI debugLog2;
     LayerMask mask;
@@ -44,7 +43,7 @@ public class PlayerInput : MonoBehaviour
                 //debugLog.text = "TOUCH";
                 if (Input.GetTouch(0).phase == TouchPhase.Began && SpawnableManager.canSpawn)
                 {
-                    debugLog.text = "PLACING OBJECT";
+                    //debugLog.text = "PLACING OBJECT";
                     SpawnableManager.PlaceObject(hitList);
                 }
             }
@@ -53,14 +52,11 @@ public class PlayerInput : MonoBehaviour
             {
                 Ray ray = arCamera.ScreenPointToRay(Input.GetTouch(0).position);
                 RaycastHit hitObject;
-                //debugLog.text = "TAPPING FOR INTERACTABLES";
                 if(Physics.Raycast(ray, out hitObject, 10f, mask))
                 {   
-                    //debugLog.text = "IN THE INTERACTABLE LAYER " + hitObject.collider.name;
                     Interactable interactable = hitObject.collider.GetComponent<Interactable>();
                     if(hitObject.collider.tag == "Lock" && interactable != null)
                     {
-                        //debugLog.text = "LOCKKKKHEART";
                         InputPanelUI.SetActive(true);
                         InputPanelUI.GetComponent<InputPanel>().setInteractable(interactable);
                     }   
@@ -81,7 +77,7 @@ public class PlayerInput : MonoBehaviour
             float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
 
             float difference = currentMagnitude - prevMagnitude;
-            SpawnableManager.Scale(difference * 0.05f + 1f);
+            //SpawnableManager.Scale(difference * 0.05f + 1f);
         }
     }
 
