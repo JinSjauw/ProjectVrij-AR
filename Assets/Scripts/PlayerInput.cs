@@ -12,9 +12,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] SpawnableManager SpawnableManager;
     [SerializeField] GameObject blurPlane;
     [SerializeField] GameObject InputPanelUI;
-
     List<ARRaycastHit> hitList = new List<ARRaycastHit>();
-
     public TextMeshProUGUI debugLog;
     LayerMask mask;
 
@@ -49,14 +47,11 @@ public class PlayerInput : MonoBehaviour
             {
                 Ray ray = arCamera.ScreenPointToRay(Input.GetTouch(0).position);
                 RaycastHit hitObject;
-                //debugLog.text = "TAPPING FOR INTERACTABLES";
                 if(Physics.Raycast(ray, out hitObject, 10f, mask))
                 {   
-                    //debugLog.text = "IN THE INTERACTABLE LAYER " + hitObject.collider.name;
                     Interactable interactable = hitObject.collider.GetComponent<Interactable>();
                     if(hitObject.collider.tag == "Lock" && interactable != null)
                     {
-                        //debugLog.text = "LOCKKKKHEART";
                         InputPanelUI.SetActive(true);
                         InputPanelUI.GetComponent<InputPanel>().setInteractable(interactable);
                     }   
