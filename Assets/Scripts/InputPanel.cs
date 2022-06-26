@@ -33,7 +33,7 @@ public class InputPanel : MonoBehaviour
         else if (code.Length >= 5 && code != answer) 
         {
             //debugLog.text = keyboard.text + " Answer Wrong Total Amount: " + keyboard.text.Length;
-            codeInput.text = " ";
+            codeInput.text = "";
         }  
     }
 

@@ -92,7 +92,7 @@ public class PlayerInput : MonoBehaviour
             if (hasSpawned == false)
             {
                 reticle = Instantiate(reticle, hitPose.position, hitPose.rotation);
-                debugLog2.text = "I Spawned";
+                //debugLog2.text = "I Spawned";
                 hasSpawned = true;
             }
             else

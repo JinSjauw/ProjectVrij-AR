@@ -11,6 +11,5 @@ public class HeartLock : MonoBehaviour, Interactable
         door.SetActive(false);
         this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         this.gameObject.GetComponent<HeartLock>().enabled = false;
-        //this.gameObject.SetActive(false);
     }
 }
