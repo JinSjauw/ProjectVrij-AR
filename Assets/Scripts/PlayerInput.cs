@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 using TMPro;
 using UnityEngine.UI;
 
@@ -12,10 +13,13 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] SpawnableManager SpawnableManager;
     [SerializeField] GameObject blurPlane;
     [SerializeField] GameObject InputPanelUI;
+    [SerializeField] GameObject reticle;
 
+    bool hasSpawned = false;
     List<ARRaycastHit> hitList = new List<ARRaycastHit>();
 
     public TextMeshProUGUI debugLog;
+    public TextMeshProUGUI debugLog2;
     LayerMask mask;
 
     // Start is called before the first frame update
@@ -81,9 +85,32 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+    void CheckForPlanes() 
+    {
+        Vector3 ray = arCamera.ViewportToScreenPoint(new Vector3(0.5f,0.5f,0.0f));
+        if (raycastManager.Raycast(ray, hitList, trackableTypes:TrackableType.PlaneWithinPolygon))
+        {
+            
+            var hitPose = hitList[0].pose;
+
+            if (hasSpawned == false)
+            {
+                reticle = Instantiate(reticle, hitPose.position, hitPose.rotation);
+                debugLog2.text = "I Spawned";
+                hasSpawned = true;
+            }
+            else
+            {
+                reticle.transform.position = hitPose.position;
+                debugLog2.text = reticle.transform.position.ToString();
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         HandleInput();
+        CheckForPlanes();
     }
 }
