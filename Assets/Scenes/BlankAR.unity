@@ -3632,7 +3632,7 @@ MonoBehaviour:
   SpawnableManager: {fileID: 1733875096}
   blurPlane: {fileID: 1709452730}
   InputPanelUI: {fileID: 733461959}
-  reticle: {fileID: 9045066720591530058, guid: c9229a337ce9f5f4daefd047c997c51d, type: 3}
+  reticle: {fileID: 6714016382058431646, guid: c0164e0a04c63174bb715fdd81b7da36, type: 3}
   debugLog: {fileID: 1754438788}
   debugLog2: {fileID: 911721028}
 --- !u!1 &1754438786
