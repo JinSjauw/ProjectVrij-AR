@@ -2220,7 +2220,6 @@ MonoBehaviour:
   codeInput: {fileID: 1962664942}
   answer: tina
   debugLog: {fileID: 1754438788}
-  codeText: {fileID: 1838625150}
 --- !u!1 &742601910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,6 +2903,7 @@ GameObject:
   - component: {fileID: 1354141928}
   - component: {fileID: 1354141927}
   - component: {fileID: 1485939947}
+  - component: {fileID: 1485939949}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -3097,6 +3097,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485939945}
   m_CullTransparentMesh: 1
+--- !u!81 &1485939949
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354141925}
+  m_Enabled: 1
 --- !u!1 &1659859597
 GameObject:
   m_ObjectHideFlags: 0
