@@ -2324,12 +2324,10 @@ struct SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730  : public Mono
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___spawnedList_8;
 	// UnityEngine.GameObject SpawnableManager::spawnablePrefab
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnablePrefab_9;
-	// UnityEngine.UI.Button SpawnableManager::exitButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___exitButton_10;
 	// UnityEngine.GameObject SpawnableManager::spawnedObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_11;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_10;
 	// System.Boolean SpawnableManager::canSpawn
-	bool ___canSpawn_12;
+	bool ___canSpawn_11;
 };
 
 // UnityEngine.EventSystems.UIBehaviour
@@ -4753,7 +4751,7 @@ IL_0008:
 	{
 		SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730* L_9 = __this->___SpawnableManager_6;
 		NullCheck(L_9);
-		bool L_10 = L_9->___canSpawn_12;
+		bool L_10 = L_9->___canSpawn_11;
 		if (!L_10)
 		{
 			goto IL_0073;
@@ -5225,8 +5223,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableManager_Start_mFC8BFB2C5F789510
 {
 	{
 		// spawnedObject = null;
-		__this->___spawnedObject_11 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___spawnedObject_11), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
+		__this->___spawnedObject_10 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___spawnedObject_10), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
 		// }
 		return;
 	}
@@ -5314,7 +5312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableManager_PlaceObject_mB513880064
 		NullCheck(L_20);
 		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_20, L_22, NULL);
 		// canSpawn = false;
-		__this->___canSpawn_12 = (bool)0;
+		__this->___canSpawn_11 = (bool)0;
 	}
 
 IL_007a:
@@ -5439,7 +5437,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableManager__ctor_m5E989BEEF4E8A6A1
 		__this->___spawnedList_8 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___spawnedList_8), (void*)L_0);
 		// public bool canSpawn = true;
-		__this->___canSpawn_12 = (bool)1;
+		__this->___canSpawn_11 = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}

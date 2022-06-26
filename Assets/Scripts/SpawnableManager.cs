@@ -14,8 +14,6 @@ public class SpawnableManager : MonoBehaviour
     [SerializeField] ARAnchorManager anchorManager;
     List<GameObject> spawnedList = new List<GameObject>();
     [SerializeField] GameObject spawnablePrefab;
-    [SerializeField] Button exitButton;
-
     //Camera arCam;
     GameObject spawnedObject;
     public bool canSpawn = true;

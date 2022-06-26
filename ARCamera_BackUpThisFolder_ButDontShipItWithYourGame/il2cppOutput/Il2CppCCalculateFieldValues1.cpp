@@ -27635,12 +27635,10 @@ struct SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730  : public Mono
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___spawnedList_8;
 	// UnityEngine.GameObject SpawnableManager::spawnablePrefab
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnablePrefab_9;
-	// UnityEngine.UI.Button SpawnableManager::exitButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___exitButton_10;
 	// UnityEngine.GameObject SpawnableManager::spawnedObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_11;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedObject_10;
 	// System.Boolean SpawnableManager::canSpawn
-	bool ___canSpawn_12;
+	bool ___canSpawn_11;
 };
 
 // TMPro.TMP_ScrollbarEventHandler
@@ -35019,9 +35017,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5120[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5121[4] = 
 {
 	static_cast<int32_t>(offsetof(PushTheButton_t528ED122D48C283D880B4D06AAB02AD6BAADE955_StaticFields, ___ButtonPressed_4)),static_cast<int32_t>(offsetof(PushTheButton_t528ED122D48C283D880B4D06AAB02AD6BAADE955, ___deviderPosition_5)),static_cast<int32_t>(offsetof(PushTheButton_t528ED122D48C283D880B4D06AAB02AD6BAADE955, ___buttonName_6)),static_cast<int32_t>(offsetof(PushTheButton_t528ED122D48C283D880B4D06AAB02AD6BAADE955, ___buttonValue_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5122[9] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5122[8] = 
 {
-	static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___debugLog_4)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___numbers_5)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___raycastManager_6)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___anchorManager_7)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___spawnedList_8)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___spawnablePrefab_9)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___exitButton_10)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___spawnedObject_11)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___canSpawn_12)),};
+	static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___debugLog_4)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___numbers_5)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___raycastManager_6)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___anchorManager_7)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___spawnedList_8)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___spawnablePrefab_9)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___spawnedObject_10)),static_cast<int32_t>(offsetof(SpawnableManager_tC029DDD2FD6DB3F1396C3546F6F6A7F53A395730, ___canSpawn_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5124[5] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,};
