@@ -14,7 +14,6 @@ public class SpawnableManager : MonoBehaviour
     [SerializeField] ARAnchorManager anchorManager;
     List<GameObject> spawnedList = new List<GameObject>();
     [SerializeField] GameObject spawnablePrefab;
-    //Camera arCam;
     GameObject spawnedObject;
     public bool canSpawn = true;
 
@@ -22,7 +21,6 @@ public class SpawnableManager : MonoBehaviour
     void Start()
     {
         spawnedObject = null;
-        //PushTheButton.ButtonPressed += AddDigit;
     }
 
     public void PlaceObject(List<ARRaycastHit> hitList) 

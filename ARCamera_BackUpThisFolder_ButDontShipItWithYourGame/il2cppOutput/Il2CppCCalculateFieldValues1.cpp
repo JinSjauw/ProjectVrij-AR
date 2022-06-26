@@ -27448,14 +27448,16 @@ struct InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7  : public MonoBehavi
 {
 	// UnityEngine.UI.Button InputPanel::exitButton
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___exitButton_4;
-	// TMPro.TextMeshProUGUI InputPanel::numbers
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___numbers_5;
+	// TMPro.TextMeshProUGUI InputPanel::code
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___code_5;
 	// System.String InputPanel::answer
 	String_t* ___answer_6;
 	// TMPro.TextMeshProUGUI InputPanel::debugLog
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___debugLog_7;
 	// Interactable InputPanel::interactable
 	RuntimeObject* ___interactable_8;
+	// UnityEngine.TouchScreenKeyboard InputPanel::keyboard
+	TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* ___keyboard_9;
 };
 
 // UnityEngine.Rendering.LensFlareComponentSRP
@@ -35005,9 +35007,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5115[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5116[1] = 
 {
 	static_cast<int32_t>(offsetof(HeartLock_t0E0391F318468A71BA54367BA3109CABF4B8DA64, ___door_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5117[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5117[6] = 
 {
-	static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___exitButton_4)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___numbers_5)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___answer_6)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___debugLog_7)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___interactable_8)),};
+	static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___exitButton_4)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___code_5)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___answer_6)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___debugLog_7)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___interactable_8)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___keyboard_9)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5119[8] = 
 {
 	static_cast<int32_t>(offsetof(PlayerInput_tBE96AF5A43484D32C39A7F108EE081D6425059EE, ___arCamera_4)),static_cast<int32_t>(offsetof(PlayerInput_tBE96AF5A43484D32C39A7F108EE081D6425059EE, ___raycastManager_5)),static_cast<int32_t>(offsetof(PlayerInput_tBE96AF5A43484D32C39A7F108EE081D6425059EE, ___SpawnableManager_6)),static_cast<int32_t>(offsetof(PlayerInput_tBE96AF5A43484D32C39A7F108EE081D6425059EE, ___blurPlane_7)),static_cast<int32_t>(offsetof(PlayerInput_tBE96AF5A43484D32C39A7F108EE081D6425059EE, ___InputPanelUI_8)),static_cast<int32_t>(offsetof(PlayerInput_tBE96AF5A43484D32C39A7F108EE081D6425059EE, ___hitList_9)),static_cast<int32_t>(offsetof(PlayerInput_tBE96AF5A43484D32C39A7F108EE081D6425059EE, ___debugLog_10)),static_cast<int32_t>(offsetof(PlayerInput_tBE96AF5A43484D32C39A7F108EE081D6425059EE, ___mask_11)),};

@@ -6,29 +6,18 @@ using TMPro;
 public class InputPanel : MonoBehaviour
 {
     [SerializeField] Button exitButton;
-    public TextMeshProUGUI numbers;
+    public TextMeshProUGUI code;
 
     [SerializeField] string answer;
     [SerializeField] TextMeshProUGUI debugLog;
 
     Interactable interactable;
+    TouchScreenKeyboard keyboard;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        PushTheButton.ButtonPressed += AddDigit;
+    private void Start() {
+        //TouchScreenKeyboard.hideInput = true;
+        keyboard.characterLimit = 5;
     }
-
-    private void AddDigit(string digit)
-    {
-        numbers.text += digit;
-    }
-
-    private void Dismiss()
-    {
-        //GateLock.SetActive(false);
-    } 
-
     public void setInteractable(Interactable interactable)
     {
         this.interactable = interactable;
@@ -36,16 +25,19 @@ public class InputPanel : MonoBehaviour
 
     void CheckInput()
     {
-        if (numbers.text == "1234")
+        code.text = keyboard.text;
+        if (code.text == answer)
         {
-            debugLog.text = "CORRECT";
-            numbers.text = "Correct";
+            //debugLog.text = "CORRECT";
+            code.text = "Correct";
             interactable.Interact();
             this.gameObject.SetActive(false);
         }
-        else if (numbers.text.Length >= 4 && numbers.text != "1234") 
+        else if (code.text.Length >= 4 && code.text != answer) 
         {
-            numbers.text = "";
+            debugLog.text = code.text + " Total Amount: " + code.text.Length;
+            code.text = " ";
+            TouchScreenKeyboard.Open(code.text);
         }  
     }
 
