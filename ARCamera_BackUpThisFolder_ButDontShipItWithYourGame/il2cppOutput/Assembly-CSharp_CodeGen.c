@@ -56,21 +56,21 @@ extern void BlurRenderer__ctor_m81A7B37303DE32861D66C36A95D01F7CBA1C2A5A (void);
 extern void HeartLock_Interact_m8472DE996E0AF932EB4F7CB2DE7366DA86A731FD (void);
 // 0x00000016 System.Void HeartLock::.ctor()
 extern void HeartLock__ctor_mBBBA62627617E6540C0A1CACAFA07AED857C7A78 (void);
-// 0x00000017 System.Void InputPanel::Awake()
-extern void InputPanel_Awake_m3469D79F79625096919B76CAE97B479F8DFCC813 (void);
-// 0x00000018 System.Void InputPanel::setInteractable(Interactable)
+// 0x00000017 System.Void InputPanel::setInteractable(Interactable)
 extern void InputPanel_setInteractable_m027034DB3725BB2489DDCB52CEFBA2674A1AD8EF (void);
-// 0x00000019 System.Void InputPanel::CheckInput(System.String)
+// 0x00000018 System.Void InputPanel::CheckInput(System.String)
 extern void InputPanel_CheckInput_m61B7BF1F8F3D3940D2E8775185FC290A3C7DF401 (void);
-// 0x0000001A System.Void InputPanel::Update()
+// 0x00000019 System.Void InputPanel::Update()
 extern void InputPanel_Update_mE4D9A5A97CA993BCBEA9B77F54AD803FFD389AB1 (void);
-// 0x0000001B System.Void InputPanel::.ctor()
+// 0x0000001A System.Void InputPanel::.ctor()
 extern void InputPanel__ctor_m20AB41EFBD0C07FFAD17BBC4940021008D6CE4E5 (void);
-// 0x0000001C System.Void Interactable::Interact()
-// 0x0000001D System.Void PlayerInput::Start()
+// 0x0000001B System.Void Interactable::Interact()
+// 0x0000001C System.Void PlayerInput::Start()
 extern void PlayerInput_Start_m13D14749E9E64A1DDBA8E2FCD69CA3CC84BFB576 (void);
-// 0x0000001E System.Void PlayerInput::HandleInput()
+// 0x0000001D System.Void PlayerInput::HandleInput()
 extern void PlayerInput_HandleInput_m0F3E0E8B5C57382752697FD9E235716275A046A8 (void);
+// 0x0000001E System.Void PlayerInput::CheckForPlanes()
+extern void PlayerInput_CheckForPlanes_m60F0E743A61814E73C5D891551C7A6A2850ABE5F (void);
 // 0x0000001F System.Void PlayerInput::Update()
 extern void PlayerInput_Update_m14D8C785B78BF2B56136439760751770928442BA (void);
 // 0x00000020 System.Void PlayerInput::.ctor()
@@ -127,7 +127,6 @@ static Il2CppMethodPointer s_methodPointers[46] =
 	BlurRenderer__ctor_m81A7B37303DE32861D66C36A95D01F7CBA1C2A5A,
 	HeartLock_Interact_m8472DE996E0AF932EB4F7CB2DE7366DA86A731FD,
 	HeartLock__ctor_mBBBA62627617E6540C0A1CACAFA07AED857C7A78,
-	InputPanel_Awake_m3469D79F79625096919B76CAE97B479F8DFCC813,
 	InputPanel_setInteractable_m027034DB3725BB2489DDCB52CEFBA2674A1AD8EF,
 	InputPanel_CheckInput_m61B7BF1F8F3D3940D2E8775185FC290A3C7DF401,
 	InputPanel_Update_mE4D9A5A97CA993BCBEA9B77F54AD803FFD389AB1,
@@ -135,6 +134,7 @@ static Il2CppMethodPointer s_methodPointers[46] =
 	NULL,
 	PlayerInput_Start_m13D14749E9E64A1DDBA8E2FCD69CA3CC84BFB576,
 	PlayerInput_HandleInput_m0F3E0E8B5C57382752697FD9E235716275A046A8,
+	PlayerInput_CheckForPlanes_m60F0E743A61814E73C5D891551C7A6A2850ABE5F,
 	PlayerInput_Update_m14D8C785B78BF2B56136439760751770928442BA,
 	PlayerInput__ctor_m24FD924FB39A9A023CDEA8F6916EEC47B471B3A8,
 	PushTheButton_add_ButtonPressed_m62FDBAF85826BECF779F5B947EA0633D5A27696C,
@@ -154,52 +154,52 @@ static Il2CppMethodPointer s_methodPointers[46] =
 };
 static const int32_t s_InvokerIndices[46] = 
 {
-	6491,
-	6491,
-	6370,
-	5184,
-	6491,
-	6491,
-	6491,
-	6491,
-	11980,
-	6425,
-	5237,
-	6491,
-	6491,
-	6491,
-	5063,
-	5184,
-	6491,
-	11980,
-	6491,
-	6491,
-	6491,
-	6491,
-	6491,
-	5184,
-	5184,
-	6491,
-	6491,
+	6493,
+	6493,
+	6372,
+	5186,
+	6493,
+	6493,
+	6493,
+	6493,
+	11982,
+	6427,
+	5239,
+	6493,
+	6493,
+	6493,
+	5065,
+	5186,
+	6493,
+	11982,
+	6493,
+	6493,
+	6493,
+	6493,
+	5186,
+	5186,
+	6493,
+	6493,
 	0,
-	6491,
-	6491,
-	6491,
-	6491,
-	11154,
-	11154,
-	6491,
-	6491,
-	6491,
-	11980,
-	11980,
-	6491,
-	5184,
-	6491,
-	5184,
-	5237,
-	6370,
-	6491,
+	6493,
+	6493,
+	6493,
+	6493,
+	6493,
+	11156,
+	11156,
+	6493,
+	6493,
+	6493,
+	11982,
+	11982,
+	6493,
+	5186,
+	6493,
+	5186,
+	5239,
+	6372,
+	6493,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
