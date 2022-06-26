@@ -72,7 +72,7 @@ public class PlayerInput : MonoBehaviour
             float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
 
             float difference = currentMagnitude - prevMagnitude;
-            SpawnableManager.Scale(difference * 0.05f + 1f);
+            //SpawnableManager.Scale(difference * 0.05f + 1f);
         }
     }
 
