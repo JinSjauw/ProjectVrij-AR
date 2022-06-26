@@ -2,22 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeartLock : Interactable
+public class HeartLock : MonoBehaviour, Interactable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject door;
 
-    new public void Interact()
+    public void Interact()
     {
-        //base.Interact();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        door.SetActive(false);
+        this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        //this.gameObject.SetActive(false);
     }
 }

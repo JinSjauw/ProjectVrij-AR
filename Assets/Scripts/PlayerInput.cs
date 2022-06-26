@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -10,12 +11,11 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] ARRaycastManager raycastManager;
     [SerializeField] SpawnableManager SpawnableManager;
     [SerializeField] GameObject blurPlane;
+    [SerializeField] GameObject InputPanelUI;
 
     List<ARRaycastHit> hitList = new List<ARRaycastHit>();
 
     public TextMeshProUGUI debugLog;
-
-    RaycastHit hit;
     LayerMask mask;
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class PlayerInput : MonoBehaviour
         mask = LayerMask.GetMask("Interactable");
     }
 
-     void HandleInput() 
+    void HandleInput() 
     {
         if (Input.touchCount == 0)
             return;
@@ -37,7 +37,7 @@ public class PlayerInput : MonoBehaviour
             //Spawning object
             if (raycastManager.Raycast(Input.GetTouch(0).position, hitList))
             {
-                debugLog.text = "TOUCH";
+                //debugLog.text = "TOUCH";
                 if (Input.GetTouch(0).phase == TouchPhase.Began && SpawnableManager.canSpawn)
                 {
                     debugLog.text = "PLACING OBJECT";
@@ -50,13 +50,16 @@ public class PlayerInput : MonoBehaviour
                 Ray ray = arCamera.ScreenPointToRay(Input.GetTouch(0).position);
                 RaycastHit hitObject;
                 debugLog.text = "TAPPING FOR INTERACTABLES";
-                if(Physics.Raycast(ray, out hitObject, mask))
+                if(Physics.Raycast(ray, out hitObject, 10f, mask))
                 {   
                     debugLog.text = "IN THE INTERACTABLE LAYER " + hitObject.collider.name;
+                    Interactable interactable = hitObject.collider.GetComponent<Interactable>();
+                    if(hitObject.collider.tag == "Lock")
+                    {
                         debugLog.text = "LOCKKKKHEART";
-                        
-                        //blurPlane.SetActive(true);
-                        //Get the "IInteractable" component from the object. Call the Interact() function
+                        InputPanelUI.SetActive(true);
+                        InputPanelUI.GetComponent<InputPanel>().setInteractable(interactable);
+                    }   
                 }
             }
         }
@@ -64,8 +67,6 @@ public class PlayerInput : MonoBehaviour
         //Pinching
         if (Input.touchCount == 2)
         {
-            debugLog.text = "PINCHING";
-            Debug.Log("PINCHING");
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
 

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PushTheButton : MonoBehaviour
 {
     public static event Action<string> ButtonPressed = delegate { };
-
+    
     private int deviderPosition;
     private string buttonName, buttonValue;
     // Start is called before the first frame update
