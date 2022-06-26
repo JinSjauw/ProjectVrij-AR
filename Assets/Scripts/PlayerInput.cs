@@ -38,7 +38,7 @@ public class PlayerInput : MonoBehaviour
                 //debugLog.text = "TOUCH";
                 if (Input.GetTouch(0).phase == TouchPhase.Began && SpawnableManager.canSpawn)
                 {
-                    debugLog.text = "PLACING OBJECT";
+                    //debugLog.text = "PLACING OBJECT";
                     SpawnableManager.PlaceObject(hitList);
                 }
             }

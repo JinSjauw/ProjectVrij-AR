@@ -14,9 +14,6 @@ public class InputPanel : MonoBehaviour
     Interactable interactable;
     TouchScreenKeyboard keyboard;
 
-    private void Awake() {
-        keyboard.characterLimit = 5;
-    }
     public void setInteractable(Interactable interactable)
     {
         this.interactable = interactable;
@@ -24,7 +21,7 @@ public class InputPanel : MonoBehaviour
 
     public void CheckInput(string code)
     {
-        debugLog.text = code + " Total Amount: " + code.Length + " Answer:" + answer + " : " + answer.Length;
+        //debugLog.text = code + " Total Amount: " + code.Length + " Answer:" + answer + " : " + answer.Length;
         
         if (code == answer)
         {
@@ -35,9 +32,8 @@ public class InputPanel : MonoBehaviour
         }
         else if (code.Length >= 5 && code != answer) 
         {
-            debugLog.text = keyboard.text + " Answer Wrong Total Amount: " + keyboard.text.Length;
+            //debugLog.text = keyboard.text + " Answer Wrong Total Amount: " + keyboard.text.Length;
             codeInput.text = " ";
-
         }  
     }
 
