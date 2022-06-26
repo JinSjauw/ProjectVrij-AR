@@ -6338,9 +6338,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TempDataAlloc_1_Dispose_mEB2F7EDDCA767A4
 // System.Void System.Collections.Generic.List`1<UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/Entry>::Add(T)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mB9181919D49F8E7F71C882BCB77A35CF276680D1_gshared_inline (List_1_tE6A967BAC61940A70814BDD10C019CC887E70047* __this, Entry_tB8765CA56422E2C92887314844384843688DCB9F ___item0, const RuntimeMethod* method) ;
 // System.Int32 Unity.Collections.NativeSlice`1<UnityEngine.UIElements.Vertex>::get_Length()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_gshared (NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_gshared_inline (NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* __this, const RuntimeMethod* method) ;
 // System.Int32 Unity.Collections.NativeSlice`1<System.UInt16>::get_Length()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_gshared (NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_gshared_inline (NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* __this, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.NativeArray`1<UnityEngine.UIElements.TextVertex>::Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Dispose_m00F78DC1166400B28889399F5407F3069C17E4E1_gshared (NativeArray_1_t8B2EB0176812FFDC7FF26382470CBFDCA595A656* __this, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/Entry>::get_Count()
@@ -6575,14 +6575,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_m4D656395C27694A7F3
 // System.Void UnityEngine.Debug::Assert(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Assert_mC95931BE797761A2D7800908C0BA4B41D68B3216 (bool ___condition0, const RuntimeMethod* method) ;
 // System.Int32 Unity.Collections.NativeSlice`1<UnityEngine.UIElements.Vertex>::get_Length()
-inline int32_t NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2 (NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* __this, const RuntimeMethod* method)
+inline int32_t NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline (NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2*, const RuntimeMethod*))NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_gshared)(__this, method);
+	return ((  int32_t (*) (NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2*, const RuntimeMethod*))NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_gshared_inline)(__this, method);
 }
 // System.Int32 Unity.Collections.NativeSlice`1<System.UInt16>::get_Length()
-inline int32_t NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F (NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* __this, const RuntimeMethod* method)
+inline int32_t NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline (NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A*, const RuntimeMethod*))NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_gshared)(__this, method);
+	return ((  int32_t (*) (NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A*, const RuntimeMethod*))NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_gshared_inline)(__this, method);
 }
 // System.Void UnityEngine.Rect::.ctor(System.Single,System.Single,System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23 (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___x0, float ___y1, float ___width2, float ___height3, const RuntimeMethod* method) ;
@@ -8409,14 +8409,14 @@ IL_0038:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_20 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_21 = (&L_20->___vertices_0);
 		int32_t L_22;
-		L_22 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_21, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_22 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_21, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		int32_t L_23 = ___vertexCount0;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_mC95931BE797761A2D7800908C0BA4B41D68B3216((bool)((((int32_t)L_22) == ((int32_t)L_23))? 1 : 0), NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_24 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_25 = (&L_24->___indices_1);
 		int32_t L_26;
-		L_26 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_25, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+		L_26 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_25, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 		int32_t L_27 = ___indexCount1;
 		Debug_Assert_mC95931BE797761A2D7800908C0BA4B41D68B3216((bool)((((int32_t)L_26) == ((int32_t)L_27))? 1 : 0), NULL);
 		MeshWriteData_tE09883A6419D2A92CC453702AD6D30486B44F5F9* L_28 = V_0;
@@ -8438,14 +8438,14 @@ IL_0038:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_37 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_38 = (&L_37->___vertices_0);
 		int32_t L_39;
-		L_39 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_38, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_39 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_38, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		UIRStylePainter_set_totalVertices_m4003102C2B1765CDC25D6028CBCE621A19AA250F_inline(__this, ((int32_t)il2cpp_codegen_add(L_36, L_39)), NULL);
 		int32_t L_40;
 		L_40 = UIRStylePainter_get_totalIndices_m89E54AF329BED34FB7FD8437030DA2A079D77ACD_inline(__this, NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_41 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_42 = (&L_41->___indices_1);
 		int32_t L_43;
-		L_43 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_42, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+		L_43 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_42, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 		UIRStylePainter_set_totalIndices_mDD08CCB15BC86465DF0E251C5A067C61EBA502A0_inline(__this, ((int32_t)il2cpp_codegen_add(L_40, L_43)), NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_44 = (&__this->___m_CurrentEntry_4);
 		il2cpp_codegen_initobj(L_44, sizeof(Entry_tB8765CA56422E2C92887314844384843688DCB9F));
@@ -8581,14 +8581,14 @@ IL_0039:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_20 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_21 = (&L_20->___vertices_0);
 		int32_t L_22;
-		L_22 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_21, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_22 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_21, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		int32_t L_23 = ___vertexCount0;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_mC95931BE797761A2D7800908C0BA4B41D68B3216((bool)((((int32_t)L_22) == ((int32_t)L_23))? 1 : 0), NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_24 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_25 = (&L_24->___indices_1);
 		int32_t L_26;
-		L_26 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_25, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+		L_26 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_25, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 		int32_t L_27 = ___indexCount1;
 		Debug_Assert_mC95931BE797761A2D7800908C0BA4B41D68B3216((bool)((((int32_t)L_26) == ((int32_t)L_27))? 1 : 0), NULL);
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&V_1), (0.0f), (0.0f), (1.0f), (1.0f), NULL);
@@ -8715,14 +8715,14 @@ IL_01df:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_68 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_69 = (&L_68->___vertices_0);
 		int32_t L_70;
-		L_70 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_69, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_70 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_69, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		UIRStylePainter_set_totalVertices_m4003102C2B1765CDC25D6028CBCE621A19AA250F_inline(__this, ((int32_t)il2cpp_codegen_add(L_67, L_70)), NULL);
 		int32_t L_71;
 		L_71 = UIRStylePainter_get_totalIndices_m89E54AF329BED34FB7FD8437030DA2A079D77ACD_inline(__this, NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_72 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_73 = (&L_72->___indices_1);
 		int32_t L_74;
-		L_74 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_73, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+		L_74 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_73, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 		UIRStylePainter_set_totalIndices_mDD08CCB15BC86465DF0E251C5A067C61EBA502A0_inline(__this, ((int32_t)il2cpp_codegen_add(L_71, L_74)), NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_75 = (&__this->___m_CurrentEntry_4);
 		il2cpp_codegen_initobj(L_75, sizeof(Entry_tB8765CA56422E2C92887314844384843688DCB9F));
@@ -8920,14 +8920,14 @@ IL_003a_1:
 				Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_36 = (&__this->___m_CurrentEntry_4);
 				NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_37 = (&L_36->___vertices_0);
 				int32_t L_38;
-				L_38 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_37, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+				L_38 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_37, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 				UIRStylePainter_set_totalVertices_m4003102C2B1765CDC25D6028CBCE621A19AA250F_inline(__this, ((int32_t)il2cpp_codegen_add(L_35, L_38)), NULL);
 				int32_t L_39;
 				L_39 = UIRStylePainter_get_totalIndices_m89E54AF329BED34FB7FD8437030DA2A079D77ACD_inline(__this, NULL);
 				Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_40 = (&__this->___m_CurrentEntry_4);
 				NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_41 = (&L_40->___indices_1);
 				int32_t L_42;
-				L_42 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_41, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+				L_42 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_41, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 				UIRStylePainter_set_totalIndices_mDD08CCB15BC86465DF0E251C5A067C61EBA502A0_inline(__this, ((int32_t)il2cpp_codegen_add(L_39, L_42)), NULL);
 				Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_43 = (&__this->___m_CurrentEntry_4);
 				il2cpp_codegen_initobj(L_43, sizeof(Entry_tB8765CA56422E2C92887314844384843688DCB9F));
@@ -9159,14 +9159,14 @@ IL_01ab:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_74 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_75 = (&L_74->___vertices_0);
 		int32_t L_76;
-		L_76 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_75, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_76 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_75, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		UIRStylePainter_set_totalVertices_m4003102C2B1765CDC25D6028CBCE621A19AA250F_inline(__this, ((int32_t)il2cpp_codegen_add(L_73, L_76)), NULL);
 		int32_t L_77;
 		L_77 = UIRStylePainter_get_totalIndices_m89E54AF329BED34FB7FD8437030DA2A079D77ACD_inline(__this, NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_78 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_79 = (&L_78->___indices_1);
 		int32_t L_80;
-		L_80 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_79, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+		L_80 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_79, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 		UIRStylePainter_set_totalIndices_mDD08CCB15BC86465DF0E251C5A067C61EBA502A0_inline(__this, ((int32_t)il2cpp_codegen_add(L_77, L_80)), NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_81 = (&__this->___m_CurrentEntry_4);
 		il2cpp_codegen_initobj(L_81, sizeof(Entry_tB8765CA56422E2C92887314844384843688DCB9F));
@@ -11823,7 +11823,7 @@ IL_024d:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_112 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_113 = (&L_112->___vertices_0);
 		int32_t L_114;
-		L_114 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_113, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_114 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_113, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		if ((((int32_t)L_114) <= ((int32_t)0)))
 		{
 			goto IL_02d8;
@@ -11833,7 +11833,7 @@ IL_024d:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_115 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_116 = (&L_115->___indices_1);
 		int32_t L_117;
-		L_117 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_116, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+		L_117 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_116, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 		G_B13_0 = ((((int32_t)L_117) > ((int32_t)0))? 1 : 0);
 		goto IL_02d9;
 	}
@@ -11862,14 +11862,14 @@ IL_02d9:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_122 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_123 = (&L_122->___vertices_0);
 		int32_t L_124;
-		L_124 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_123, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_124 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_123, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		UIRStylePainter_set_totalVertices_m4003102C2B1765CDC25D6028CBCE621A19AA250F_inline(__this, ((int32_t)il2cpp_codegen_add(L_121, L_124)), NULL);
 		int32_t L_125;
 		L_125 = UIRStylePainter_get_totalIndices_m89E54AF329BED34FB7FD8437030DA2A079D77ACD_inline(__this, NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_126 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_127 = (&L_126->___indices_1);
 		int32_t L_128;
-		L_128 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_127, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+		L_128 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_127, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 		UIRStylePainter_set_totalIndices_mDD08CCB15BC86465DF0E251C5A067C61EBA502A0_inline(__this, ((int32_t)il2cpp_codegen_add(L_125, L_128)), NULL);
 		ClosingInfo_t2DD9FDAA81DB13384355D75E956D24D1594C9D14* L_129 = (&__this->___m_ClosingInfo_5);
 		L_129->___needsClosing_0 = (bool)1;
@@ -11935,12 +11935,12 @@ IL_0013:
 		V_0 = L_4;
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_5 = (&(&V_0)->___vertices_0);
 		int32_t L_6;
-		L_6 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_5, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_6 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_5, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_mC95931BE797761A2D7800908C0BA4B41D68B3216((bool)((((int32_t)L_6) > ((int32_t)0))? 1 : 0), NULL);
 		NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_7 = (&(&V_0)->___indices_1);
 		int32_t L_8;
-		L_8 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_7, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+		L_8 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_7, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 		Debug_Assert_mC95931BE797761A2D7800908C0BA4B41D68B3216((bool)((((int32_t)L_8) > ((int32_t)0))? 1 : 0), NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_9 = (&__this->___m_CurrentEntry_4);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F L_10 = V_0;
@@ -11970,7 +11970,7 @@ IL_0013:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_26 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_27 = (&L_26->___vertices_0);
 		int32_t L_28;
-		L_28 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_27, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_28 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_27, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		V_1 = L_28;
 		TempDataAlloc_1_t504D7F25C2A34C0B632642E1FDC8518420C9108D* L_29 = (&__this->___m_VertsPool_10);
 		int32_t L_30 = V_1;
@@ -12018,14 +12018,14 @@ IL_0129:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_46 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_47 = (&L_46->___vertices_0);
 		int32_t L_48;
-		L_48 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_47, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_48 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_47, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		UIRStylePainter_set_totalVertices_m4003102C2B1765CDC25D6028CBCE621A19AA250F_inline(__this, ((int32_t)il2cpp_codegen_add(L_45, L_48)), NULL);
 		int32_t L_49;
 		L_49 = UIRStylePainter_get_totalIndices_m89E54AF329BED34FB7FD8437030DA2A079D77ACD_inline(__this, NULL);
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F* L_50 = (&__this->___m_CurrentEntry_4);
 		NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* L_51 = (&L_50->___indices_1);
 		int32_t L_52;
-		L_52 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F(L_51, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
+		L_52 = NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_inline(L_51, NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_RuntimeMethod_var);
 		UIRStylePainter_set_totalIndices_mDD08CCB15BC86465DF0E251C5A067C61EBA502A0_inline(__this, ((int32_t)il2cpp_codegen_add(L_49, L_52)), NULL);
 		List_1_tE6A967BAC61940A70814BDD10C019CC887E70047* L_53 = __this->___m_Entries_1;
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F L_54 = __this->___m_CurrentEntry_4;
@@ -12275,7 +12275,7 @@ IL_0024:
 		int32_t L_42 = L_41.___vertexCount_2;
 		NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* L_43 = (&__this->___m_MeshDataVerts_4);
 		int32_t L_44;
-		L_44 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2(L_43, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
+		L_44 = NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_inline(L_43, NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_RuntimeMethod_var);
 		G_B6_0 = ((((int32_t)((((int32_t)L_42) == ((int32_t)L_44))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_00e0;
 	}
@@ -25908,6 +25908,20 @@ IL_0034:
 		Entry_tB8765CA56422E2C92887314844384843688DCB9F L_9 = ___item0;
 		((  void (*) (List_1_tE6A967BAC61940A70814BDD10C019CC887E70047*, Entry_tB8765CA56422E2C92887314844384843688DCB9F, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 11)))(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 11));
 		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NativeSlice_1_get_Length_m1D81D3247A86590A8FAE91D1E30F47BA2E3037C2_gshared_inline (NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = (int32_t)__this->___m_Length_2;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NativeSlice_1_get_Length_m420F85C71480DC99C551B9188D5BDD7A6B8A8C2F_gshared_inline (NativeSlice_1_t0D1A1AB7A9C4768B84EB7420D04A90920533C78A* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = (int32_t)__this->___m_Length_2;
+		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m2FF71F8AF37FB378FE0EB6570228A61F7A529998_gshared_inline (List_1_tE6A967BAC61940A70814BDD10C019CC887E70047* __this, const RuntimeMethod* method) 

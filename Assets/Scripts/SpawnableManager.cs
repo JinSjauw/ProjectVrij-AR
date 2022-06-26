@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using TMPro;
+using UnityEngine.UI;
 
 public class SpawnableManager : MonoBehaviour
 {
 
     public TextMeshProUGUI debugLog;
-    [SerializeField]
-    ARRaycastManager raycastManager;
+    public TextMeshProUGUI numbers;
+    [SerializeField] ARRaycastManager raycastManager;
+    [SerializeField] ARAnchorManager anchorManager;
+
     List<ARRaycastHit> hitList = new List<ARRaycastHit>();
     List<GameObject> spawnedList = new List<GameObject>();
-    [SerializeField]
-    GameObject spawnablePrefab;
+    [SerializeField] GameObject spawnablePrefab;
+    [SerializeField] GameObject numberLock;
+    [SerializeField] Button exitButton;
 
     Camera arCam;
     GameObject spawnedObject;
@@ -23,48 +27,110 @@ public class SpawnableManager : MonoBehaviour
     {
         spawnedObject = null;
         arCam = FindObjectOfType<Camera>();
+        //exitButton.onClick.AddListener(Dismiss);
+        PushTheButton.ButtonPressed += AddDigit;
     }
     
     // Update is called once per frame
     void Update()
     {
-        PlaceObject();
+        HandleInput();
+        if (numbers.text == "1234" && numbers.text.Length == 4)
+        {
+            //Open Door.
+            numbers.text = "Correct";
+            //numberLock.SetActive(false);
+        }
+        else if (numbers.text.Length >= 4) 
+        {
+            numbers.text = "";
+        }
     }
 
-    void PlaceObject() 
+    void PlaceObject(ARAnchor roomAnchor) 
+    {
+        GameObject gameObject = Instantiate(spawnablePrefab, hitList[0].pose.position, Quaternion.identity);
+        if (gameObject.GetComponent<ARAnchor>() == null) 
+        {
+            gameObject.transform.SetParent(roomAnchor.transform);
+        }
+
+        spawnedList.Add(gameObject);
+        debugLog.text = "SPAWNING";
+    }
+    void Scale(float scaling)
+    {
+        debugLog.text = "SCALING" + spawnedList.Count.ToString();
+        foreach (GameObject gameObject in spawnedList)
+        {
+            debugLog.text = "scaling: " + scaling;
+            gameObject.transform.localScale *= scaling;
+        }
+
+    }
+
+    private void AddDigit(string digit)
+    {
+        numbers.text += digit;
+    }
+
+    private void Dismiss()
+    {
+        numberLock.SetActive(false);
+    } 
+
+
+    void HandleInput() 
     {
         if (Input.touchCount == 0)
             return;
 
         //Tapping
-        if(Input.touchCount == 1) 
+        if (Input.touchCount == 1)
         {
-            debugLog.text = "TAPPING";
+            //debugLog.text = "TAPPING";
             if (raycastManager.Raycast(Input.GetTouch(0).position, hitList))
             {
-                if (Input.GetTouch(0).phase == TouchPhase.Began && spawnedObject == null)
+                if (Input.GetTouch(0).phase == TouchPhase.Began)
                 {
                     RaycastHit hit;
-                    if (Physics.Raycast(arCam.transform.position, arCam.transform.forward, out hit))
+                    Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
+                    
+                    if (spawnedObject == null)
                     {
-                            GameObject gameObject = Instantiate(spawnablePrefab, hitList[0].pose.position, Quaternion.identity);
-                            spawnedList.Add(gameObject);
-                            debugLog.text = "SPAWNING";
+                        if (Physics.Raycast(arCam.transform.position, arCam.transform.forward, out hit))
+                        {
+                            debugLog.text = hit.transform.name;
+                            if (spawnedList.Count < 1)
+                            {
+                                ARAnchor roomAnchor = anchorManager.AttachAnchor(hitList[0].trackable.GetComponent<ARPlane>(), hitList[0].pose);
+                                debugLog.text = roomAnchor.ToString() + "ROOMANCHOR";
+                                if (roomAnchor != null)
+                                {
+                                    PlaceObject(roomAnchor);
+                                }
+                            }
+                        }
+                        if (Input.GetTouch(0).phase == TouchPhase.Ended)
+                        {
+                            spawnedObject = null;
+                        }
                     }
-                    else if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null)
+                    if (Physics.Raycast(ray, out hit))
                     {
-                        spawnedObject.transform.position = hitList[0].pose.position;
-                    }
-                    if (Input.GetTouch(0).phase == TouchPhase.Ended)
-                    {
-                        spawnedObject = null;
+                        NumberLock aLock = hit.transform.GetComponent<NumberLock>();
+
+                        if (aLock != null) 
+                        {
+                            numberLock.SetActive(true);
+                            //debugLog.text = "NOT NULL";
+                        }
                     }
                 }
             }
         }
-        
-        //Pinching
 
+        //Pinching
         if (Input.touchCount == 2)
         {
             debugLog.text = "PINCHING";
@@ -82,16 +148,6 @@ public class SpawnableManager : MonoBehaviour
 
             Scale(difference * 0.05f + 1f);
         }
-    }
-    void Scale(float scaling)
-    {
-        debugLog.text = "SCALING" + spawnedList.Count.ToString();
-        foreach (GameObject gameObject in spawnedList)
-        {
-            debugLog.text = "scaling: " + scaling;
-            gameObject.transform.localScale *= scaling;
-        }
-
     }
 
     public List<GameObject> getSpawnedList() 

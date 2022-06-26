@@ -6034,17 +6034,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m29855DE65C4058FF
 // System.Int32 Unity.Collections.NativeArray`1<Unity.Jobs.JobHandle>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m00FCA3EED0378A233EDB74E23AFA3BCAACDB760A_gshared (NativeArray_1_t84C22AC03FE6517D060874E39A444D03469DD2F0* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m00FCA3EED0378A233EDB74E23AFA3BCAACDB760A_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -6179,6 +6171,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -6249,7 +6242,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -6267,21 +6260,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -6906,17 +6901,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m672DC5AFE8BA87E3
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Experimental.GlobalIllumination.LightDataGI>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m6B1F8FA4FEEB294C3031B7AA7B94084E506811C6_gshared (NativeArray_1_tDF6A1978B5813BF4DAD7948E398009FFC9BEA38D* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m6B1F8FA4FEEB294C3031B7AA7B94084E506811C6_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -7051,6 +7038,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -7121,7 +7109,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -7139,21 +7127,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -7778,17 +7768,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mA323F94BC0DDBE07
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Rendering.Universal.LightMinMaxZ>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m41DEA98D1A79BA511177B1C6AEB80FF51F4B0FE4_gshared (NativeArray_1_t0670C94F239C615B37C52F3DC5FD502E2CE8A0A9* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m41DEA98D1A79BA511177B1C6AEB80FF51F4B0FE4_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -7923,6 +7905,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -7993,7 +7976,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -8011,21 +7994,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -8650,17 +8635,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m3743D49904C2E7E2
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.XR.ARCore.ManagedReferenceImage>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m9BFFCEB7F21A845A5DE6C70BE658644DB067AA53_gshared (NativeArray_1_tA7A7D0942211548E9D94C540285A4463D32DC5FF* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m9BFFCEB7F21A845A5DE6C70BE658644DB067AA53_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -8795,6 +8772,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -8865,7 +8843,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -8883,21 +8861,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -9522,17 +9502,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m298BC57889749D88
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Matrix4x4>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m5E570937E705A0DC062D5EE6BD54244219C3C409_gshared (NativeArray_1_t6D4C2D5161FC101BAF06059CD9414A2153CCC2A0* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m5E570937E705A0DC062D5EE6BD54244219C3C409_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -9667,6 +9639,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -9737,7 +9710,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -9755,21 +9728,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -10394,17 +10369,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m53C0ADB571326028
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.XR.MeshTransform>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m2F3FBCB03737CF9FC9CC3F018F1947131E040D04_gshared (NativeArray_1_tA41870B57F75C8F0729AE0AC70060D0D7841D236* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m2F3FBCB03737CF9FC9CC3F018F1947131E040D04_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -10539,6 +10506,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -10609,7 +10577,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -10627,21 +10595,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -11266,17 +11236,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m62A416C0FB4380AE
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.ModifiableContactPair>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m89CDE5A60D674BC7918DEFF8A96FA708F730AC53_gshared (NativeArray_1_tA04FF6E7BE3D24B3E6351C63BF7229421DFE1259* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m89CDE5A60D674BC7918DEFF8A96FA708F730AC53_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -11411,6 +11373,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -11481,7 +11444,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -11499,21 +11462,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -12138,17 +12103,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mFDB32DE6C25E6DAE
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Plane>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m4BA6FBD8E09035107C6A6FC5B2F0AFB43D396A0F_gshared (NativeArray_1_t4020B6981295FB915DCE82EF368535F680C13A49* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m4BA6FBD8E09035107C6A6FC5B2F0AFB43D396A0F_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -12283,6 +12240,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -12353,7 +12311,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -12371,21 +12329,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -13010,17 +12970,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m76A6CC9E0503523D
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Rendering.Universal.PreTile>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m529492C08FFB030D1F8BAD78D483F5B30B80CE1C_gshared (NativeArray_1_t65CDBEDCEF4486754ED91C90C782929F1397FD01* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m529492C08FFB030D1F8BAD78D483F5B30B80CE1C_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -13155,6 +13107,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -13225,7 +13178,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -13243,21 +13196,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -13882,17 +13837,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m06E50AA3B9DCCF44
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Quaternion>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m17B851F3CF55F2B81B3BCF6BDECB922464607EE5_gshared (NativeArray_1_t033CD013BF2CA1D8A5909650F2E75960C527E638* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m17B851F3CF55F2B81B3BCF6BDECB922464607EE5_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -14027,6 +13974,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -14097,7 +14045,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -14115,21 +14063,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -14754,17 +14704,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mE6FFDFC590237B53
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Rendering.RenderStateBlock>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_mE813A5A10C23F39B2B09D369F946067B036FDFFD_gshared (NativeArray_1_t0AB49EE6A37F6BC668C15EDFBE9BE92A22B2F0DB* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_mE813A5A10C23F39B2B09D369F946067B036FDFFD_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -14899,6 +14841,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -14969,7 +14912,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -14987,21 +14930,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -15626,17 +15571,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m894FE11AB2252D7E
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Rendering.ShaderTagId>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m6D52AEB15BD7515F77966F5A868B116442339EE9_gshared (NativeArray_1_t5576C5C8F17BB3E1BA11BBA3EC50A55FC1246445* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m6D52AEB15BD7515F77966F5A868B116442339EE9_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -15771,6 +15708,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -15841,7 +15779,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -15859,21 +15797,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -16498,17 +16438,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mA4E393D027A34B4C
 // System.Int32 Unity.Collections.NativeArray`1<System.Single>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m7A545F890451F6FE417856F4B2448934E42D59C0_gshared (NativeArray_1_t3848EE4B6647317212A754634DE6DBC90B99FBEF* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m7A545F890451F6FE417856F4B2448934E42D59C0_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -16642,6 +16574,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -16712,7 +16645,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -16730,21 +16663,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -17369,17 +17304,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mB838E1A2CDFD5C25
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.UIElements.TextVertex>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m57F94752F30AEDCA1C66D7F2F777CF96C5B591FB_gshared (NativeArray_1_t8B2EB0176812FFDC7FF26382470CBFDCA595A656* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m57F94752F30AEDCA1C66D7F2F777CF96C5B591FB_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -17514,6 +17441,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -17584,7 +17512,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -17602,21 +17530,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -18241,17 +18171,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m1C279B959DCA5618
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.TrackableId>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_mC663B168B1FD5A25872102FF5A2681D22101AFAB_gshared (NativeArray_1_t7A26520FDE477098D7B2CC8D14E778889D50A15E* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_mC663B168B1FD5A25872102FF5A2681D22101AFAB_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -18386,6 +18308,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -18456,7 +18379,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -18474,21 +18397,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -19113,17 +19038,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m840CFA2D292B2D1F
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.UIElements.UIR.Transform3x4>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m8DD75A61E06848F37585A107B393E68E5C6253AE_gshared (NativeArray_1_t7E7FEB7601A0E8158B43F2495CB02DBB211ADF51* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m8DD75A61E06848F37585A107B393E68E5C6253AE_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -19258,6 +19175,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -19328,7 +19246,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -19346,21 +19264,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -19985,17 +19905,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m872E4B50FD98B174
 // System.Int32 Unity.Collections.NativeArray`1<System.UInt16>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m5633FCBDAC48261DAABADC80B618EAF3F10E5FD6_gshared (NativeArray_1_t275C00CC374DEA66C69B3BB3992116F315A8E934* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m5633FCBDAC48261DAABADC80B618EAF3F10E5FD6_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -20129,6 +20041,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -20199,7 +20112,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -20217,21 +20130,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -20856,17 +20771,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mD8E0A87CE3A5AD8B
 // System.Int32 Unity.Collections.NativeArray`1<System.UInt32>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m4EBC3EEAD74E5AF98D8003DEEF84743382524D2F_gshared (NativeArray_1_t453E3DEA4CC9F1056F24E417C3308C35174BC184* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m4EBC3EEAD74E5AF98D8003DEEF84743382524D2F_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -21000,6 +20907,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -21070,7 +20978,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -21088,21 +20996,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -21727,17 +21637,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m1CF36D2612C34E94
 // System.Int32 Unity.Collections.NativeArray`1<System.UInt64>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_mBB3F3B28C119432732FDC07AEE247655FFDC358E_gshared (NativeArray_1_t07975297AD7F7512193094A7C0703BA872EF7A7B* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_mBB3F3B28C119432732FDC07AEE247655FFDC358E_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -21871,6 +21773,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -21941,7 +21844,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -21959,21 +21862,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -22598,17 +22503,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mD2027A0749B95A90
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Vector2>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_mA4686CFE7718BA8B1B36CA0188B7DCB51EE3B45B_gshared (NativeArray_1_t0BB246A2F65C2C705F83BEBE1B62D9543C330B70* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_mA4686CFE7718BA8B1B36CA0188B7DCB51EE3B45B_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -22743,6 +22640,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -22813,7 +22711,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -22831,21 +22729,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -23470,17 +23370,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mB52A7E481F1012FB
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Vector3>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m2DAF9F6A1664FFD79A0ECB8CA6E2445208F789F7_gshared (NativeArray_1_t97E2BFD61E13EEF2CDE34A313415FAD03AB993FD* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m2DAF9F6A1664FFD79A0ECB8CA6E2445208F789F7_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -23615,6 +23507,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -23685,7 +23578,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -23703,21 +23596,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -24342,17 +24237,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mDA500E3EFC2BA24F
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Vector4>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_mCB71ECBEA1EEB84DC333C72D14B6E718854D5282_gshared (NativeArray_1_t1319594EE236701FE431CF2885AEB88373076DA8* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_mCB71ECBEA1EEB84DC333C72D14B6E718854D5282_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -24487,6 +24374,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -24557,7 +24445,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -24575,21 +24463,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -25214,17 +25104,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mB10053315A376F76
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.UIElements.Vertex>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_mF3DA552DF6DC815C8B889E129432C2A833D28B1B_gshared (NativeArray_1_tB60512C6E4578B7CC8EB79321680E495E69ABF81* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_mF3DA552DF6DC815C8B889E129432C2A833D28B1B_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -25359,6 +25241,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -25429,7 +25312,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -25447,21 +25330,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -26086,17 +25971,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_mF23E1CA5919C86A4
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.Rendering.VisibleLight>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m776EA5C7F4607E4961A86BC5A8A83FFA448C8370_gshared (NativeArray_1_t71485A1E60B31CCAD3E525C907CF172E8B804468* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m776EA5C7F4607E4961A86BC5A8A83FFA448C8370_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -26231,6 +26108,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -26301,7 +26179,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -26319,21 +26197,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -26958,17 +26838,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m783094538FD9AF9B
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRAnchor>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m5E37FD5A39D109EDFE29308233C5C869D06F0300_gshared (NativeArray_1_tAE2F2F17B6A4F98F44324897A00F6A9D2151DC3A* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m5E37FD5A39D109EDFE29308233C5C869D06F0300_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -27103,6 +26975,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -27173,7 +27046,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -27191,21 +27064,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;
@@ -27830,17 +27705,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Allocate_m9E40923C5360375D
 // System.Int32 Unity.Collections.NativeArray`1<UnityEngine.XR.ARSubsystems.XRCameraConfiguration>::get_Length()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeArray_1_get_Length_m9CF20847BB29416335339A1D7C7FCBC6DA0FD857_gshared (NativeArray_1_tAE1C2CA4717E405609ED9F96E485A9FE00E622D6* __this, const RuntimeMethod* method) 
 {
-	int32_t V_0 = 0;
 	{
 		int32_t L_0 = (int32_t)__this->___m_Length_1;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C  int32_t NativeArray_1_get_Length_m9CF20847BB29416335339A1D7C7FCBC6DA0FD857_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
@@ -27975,6 +27842,7 @@ IL_0034:
 IL_005c:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		return;
 	}
 }
@@ -28045,7 +27913,7 @@ IL_0034:
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_0092;
+			goto IL_0099;
 		}
 	}
 	{
@@ -28063,21 +27931,23 @@ IL_0034:
 		L_13 = IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729(L_11, L_12, IJobExtensions_Schedule_TisNativeArrayDisposeJob_tC4C226F42B67C01224F186D06868C7BCB828E9FB_mE0EF7A2E3EC99D44D48D36F7E42E1A538057F729_RuntimeMethod_var);
 		V_3 = L_13;
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		__this->___m_AllocatorLabel_2 = (int32_t)0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_14 = V_3;
 		V_6 = L_14;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_0092:
+IL_0099:
 	{
 		__this->___m_Buffer_0 = (void*)((uintptr_t)0);
+		__this->___m_Length_1 = 0;
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_15 = ___inputDeps0;
 		V_6 = L_15;
-		goto IL_009f;
+		goto IL_00ad;
 	}
 
-IL_009f:
+IL_00ad:
 	{
 		JobHandle_t5DF5F99902FED3C801A81C05205CEA6CE039EF08 L_16 = V_6;
 		return L_16;

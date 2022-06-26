@@ -6976,12 +6976,10 @@ struct PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC  : public Scripta
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___m_TargetRect_29;
 	// System.Single UnityEngine.UIElements.PanelSettings::m_ResolvedScale
 	float ___m_ResolvedScale_30;
-	// UnityEngine.UIElements.StyleSheet UnityEngine.UIElements.PanelSettings::m_OldThemeUss
-	StyleSheet_t6FAF43FCDB45BC6BED0522A222FD4C1A9BB10428* ___m_OldThemeUss_31;
 	// System.Int32 UnityEngine.UIElements.PanelSettings::m_EmptyPanelCounter
-	int32_t ___m_EmptyPanelCounter_32;
+	int32_t ___m_EmptyPanelCounter_31;
 	// System.Func`2<UnityEngine.Vector2,UnityEngine.Vector2> UnityEngine.UIElements.PanelSettings::m_AssignedScreenToPanel
-	Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* ___m_AssignedScreenToPanel_33;
+	Func_2_t33ED521BE3A7E943FA8D764514952EDF1AF1C0FA* ___m_AssignedScreenToPanel_32;
 };
 
 // UnityEngine.UIElements.StyleSheet
