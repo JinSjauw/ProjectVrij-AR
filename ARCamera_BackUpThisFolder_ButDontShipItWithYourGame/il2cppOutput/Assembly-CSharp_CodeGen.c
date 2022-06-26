@@ -52,12 +52,12 @@ extern void BlurRenderer__ctor_m81A7B37303DE32861D66C36A95D01F7CBA1C2A5A (void);
 extern void HeartLock_Interact_m8472DE996E0AF932EB4F7CB2DE7366DA86A731FD (void);
 // 0x00000014 System.Void HeartLock::.ctor()
 extern void HeartLock__ctor_mBBBA62627617E6540C0A1CACAFA07AED857C7A78 (void);
-// 0x00000015 System.Void InputPanel::Start()
-extern void InputPanel_Start_m4B591A81A93352545C5A54373051CC078E9A52B2 (void);
+// 0x00000015 System.Void InputPanel::Awake()
+extern void InputPanel_Awake_m3469D79F79625096919B76CAE97B479F8DFCC813 (void);
 // 0x00000016 System.Void InputPanel::setInteractable(Interactable)
 extern void InputPanel_setInteractable_m027034DB3725BB2489DDCB52CEFBA2674A1AD8EF (void);
-// 0x00000017 System.Void InputPanel::CheckInput()
-extern void InputPanel_CheckInput_m7DA2885806F309465C450210B4B2C7B05889D1D6 (void);
+// 0x00000017 System.Void InputPanel::CheckInput(System.String)
+extern void InputPanel_CheckInput_m61B7BF1F8F3D3940D2E8775185FC290A3C7DF401 (void);
 // 0x00000018 System.Void InputPanel::Update()
 extern void InputPanel_Update_mE4D9A5A97CA993BCBEA9B77F54AD803FFD389AB1 (void);
 // 0x00000019 System.Void InputPanel::.ctor()
@@ -121,9 +121,9 @@ static Il2CppMethodPointer s_methodPointers[44] =
 	BlurRenderer__ctor_m81A7B37303DE32861D66C36A95D01F7CBA1C2A5A,
 	HeartLock_Interact_m8472DE996E0AF932EB4F7CB2DE7366DA86A731FD,
 	HeartLock__ctor_mBBBA62627617E6540C0A1CACAFA07AED857C7A78,
-	InputPanel_Start_m4B591A81A93352545C5A54373051CC078E9A52B2,
+	InputPanel_Awake_m3469D79F79625096919B76CAE97B479F8DFCC813,
 	InputPanel_setInteractable_m027034DB3725BB2489DDCB52CEFBA2674A1AD8EF,
-	InputPanel_CheckInput_m7DA2885806F309465C450210B4B2C7B05889D1D6,
+	InputPanel_CheckInput_m61B7BF1F8F3D3940D2E8775185FC290A3C7DF401,
 	InputPanel_Update_mE4D9A5A97CA993BCBEA9B77F54AD803FFD389AB1,
 	InputPanel__ctor_m20AB41EFBD0C07FFAD17BBC4940021008D6CE4E5,
 	NULL,
@@ -170,7 +170,7 @@ static const int32_t s_InvokerIndices[44] =
 	6491,
 	6491,
 	5184,
-	6491,
+	5184,
 	6491,
 	6491,
 	0,

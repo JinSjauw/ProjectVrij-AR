@@ -6,16 +6,15 @@ using TMPro;
 public class InputPanel : MonoBehaviour
 {
     [SerializeField] Button exitButton;
-    public TextMeshProUGUI code;
-
+    //public TextMeshProUGUI code;
+    [SerializeField] TMP_InputField codeInput;
     [SerializeField] string answer;
     [SerializeField] TextMeshProUGUI debugLog;
 
     Interactable interactable;
     TouchScreenKeyboard keyboard;
 
-    private void Start() {
-        //TouchScreenKeyboard.hideInput = true;
+    private void Awake() {
         keyboard.characterLimit = 5;
     }
     public void setInteractable(Interactable interactable)
@@ -23,27 +22,28 @@ public class InputPanel : MonoBehaviour
         this.interactable = interactable;
     }
 
-    void CheckInput()
+    public void CheckInput(string code)
     {
-        code.text = keyboard.text;
-        if (code.text == answer)
+        debugLog.text = code + " Total Amount: " + code.Length + " Answer:" + answer + " : " + answer.Length;
+        
+        if (code == answer)
         {
             //debugLog.text = "CORRECT";
-            code.text = "Correct";
+            code = "Correct";
             interactable.Interact();
             this.gameObject.SetActive(false);
         }
-        else if (code.text.Length >= 4 && code.text != answer) 
+        else if (code.Length >= 5 && code != answer) 
         {
-            debugLog.text = code.text + " Total Amount: " + code.text.Length;
-            code.text = " ";
-            TouchScreenKeyboard.Open(code.text);
+            debugLog.text = keyboard.text + " Answer Wrong Total Amount: " + keyboard.text.Length;
+            codeInput.text = " ";
+
         }  
     }
 
     // Update is called once per frame
     void Update()
     {
-            CheckInput();
+           // CheckInput();
     }
 }
