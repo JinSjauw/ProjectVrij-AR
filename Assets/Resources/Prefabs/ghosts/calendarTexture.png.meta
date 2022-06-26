@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Resources/Prefabs/ghosts/calendarTexture.png.meta
 guid: 82a69db5cf6e0d94ab5c75968864dfe6
+========
+guid: dba6e0b1d74c8ee41af464bff706e891
+>>>>>>>> main:Assets/Resources/Texture/A.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
