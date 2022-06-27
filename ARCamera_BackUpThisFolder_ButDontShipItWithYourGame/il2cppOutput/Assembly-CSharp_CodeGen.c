@@ -64,62 +64,67 @@ extern void ARFeatheredPlaneMeshVisualizer__cctor_mF4BA6DDB611A3FD966C8B9494AE6B
 extern void BlurRenderer_Start_mA8C7F0DA48BC0DB3F6C0C606115FA9B92DE390F0 (void);
 // 0x0000001A System.Void BlurRenderer::.ctor()
 extern void BlurRenderer__ctor_m81A7B37303DE32861D66C36A95D01F7CBA1C2A5A (void);
-// 0x0000001B System.Void HeartLock::Interact()
+// 0x0000001B System.Void HeartLock::Start()
+extern void HeartLock_Start_mCE928F32845AF5C26E686B5CE799D29081D9893F (void);
+// 0x0000001C System.Boolean HeartLock::isActive()
+extern void HeartLock_isActive_m6F58A1B99AB7527529C7E8ED3A7AEE7E191E974D (void);
+// 0x0000001D System.Void HeartLock::Interact()
 extern void HeartLock_Interact_m8472DE996E0AF932EB4F7CB2DE7366DA86A731FD (void);
-// 0x0000001C System.Void HeartLock::.ctor()
+// 0x0000001E System.Void HeartLock::.ctor()
 extern void HeartLock__ctor_mBBBA62627617E6540C0A1CACAFA07AED857C7A78 (void);
-// 0x0000001D System.Void InputPanel::setInteractable(Interactable)
+// 0x0000001F System.Void InputPanel::setInteractable(Interactable)
 extern void InputPanel_setInteractable_m027034DB3725BB2489DDCB52CEFBA2674A1AD8EF (void);
-// 0x0000001E System.Void InputPanel::CheckInput(System.String)
+// 0x00000020 System.Void InputPanel::CheckInput(System.String)
 extern void InputPanel_CheckInput_m61B7BF1F8F3D3940D2E8775185FC290A3C7DF401 (void);
-// 0x0000001F System.Void InputPanel::Update()
+// 0x00000021 System.Void InputPanel::Update()
 extern void InputPanel_Update_mE4D9A5A97CA993BCBEA9B77F54AD803FFD389AB1 (void);
-// 0x00000020 System.Void InputPanel::.ctor()
+// 0x00000022 System.Void InputPanel::.ctor()
 extern void InputPanel__ctor_m20AB41EFBD0C07FFAD17BBC4940021008D6CE4E5 (void);
-// 0x00000021 System.Void Interactable::Interact()
-// 0x00000022 System.Void PlayerInput::Start()
+// 0x00000023 System.Boolean Interactable::isActive()
+// 0x00000024 System.Void Interactable::Interact()
+// 0x00000025 System.Void PlayerInput::Start()
 extern void PlayerInput_Start_m13D14749E9E64A1DDBA8E2FCD69CA3CC84BFB576 (void);
-// 0x00000023 System.Void PlayerInput::HandleInput()
+// 0x00000026 System.Void PlayerInput::HandleInput()
 extern void PlayerInput_HandleInput_m0F3E0E8B5C57382752697FD9E235716275A046A8 (void);
-// 0x00000024 System.Void PlayerInput::CheckForPlanes()
+// 0x00000027 System.Void PlayerInput::CheckForPlanes()
 extern void PlayerInput_CheckForPlanes_m60F0E743A61814E73C5D891551C7A6A2850ABE5F (void);
-// 0x00000025 System.Void PlayerInput::Update()
+// 0x00000028 System.Void PlayerInput::Update()
 extern void PlayerInput_Update_m14D8C785B78BF2B56136439760751770928442BA (void);
-// 0x00000026 System.Void PlayerInput::OnTriggerEnter(UnityEngine.Collider)
+// 0x00000029 System.Void PlayerInput::OnTriggerEnter(UnityEngine.Collider)
 extern void PlayerInput_OnTriggerEnter_m8C5556BF55F5C2D96287655B17BE86A7C6390D8F (void);
-// 0x00000027 System.Void PlayerInput::.ctor()
+// 0x0000002A System.Void PlayerInput::.ctor()
 extern void PlayerInput__ctor_m24FD924FB39A9A023CDEA8F6916EEC47B471B3A8 (void);
-// 0x00000028 System.Void PushTheButton::add_ButtonPressed(System.Action`1<System.String>)
+// 0x0000002B System.Void PushTheButton::add_ButtonPressed(System.Action`1<System.String>)
 extern void PushTheButton_add_ButtonPressed_m62FDBAF85826BECF779F5B947EA0633D5A27696C (void);
-// 0x00000029 System.Void PushTheButton::remove_ButtonPressed(System.Action`1<System.String>)
+// 0x0000002C System.Void PushTheButton::remove_ButtonPressed(System.Action`1<System.String>)
 extern void PushTheButton_remove_ButtonPressed_m0ECB08E0AF5000F85771BD2C8C8079FC06A301AA (void);
-// 0x0000002A System.Void PushTheButton::Start()
+// 0x0000002D System.Void PushTheButton::Start()
 extern void PushTheButton_Start_m0F645274DA59360362DEC821B906D64EA1655F4F (void);
-// 0x0000002B System.Void PushTheButton::ButtonClicked()
+// 0x0000002E System.Void PushTheButton::ButtonClicked()
 extern void PushTheButton_ButtonClicked_m601AB5795832B88A2590B096F17883D45576C5C5 (void);
-// 0x0000002C System.Void PushTheButton::.ctor()
+// 0x0000002F System.Void PushTheButton::.ctor()
 extern void PushTheButton__ctor_m1AB308A6BA0FB50BAD97F475965F9ACFA70EF081 (void);
-// 0x0000002D System.Void PushTheButton::.cctor()
+// 0x00000030 System.Void PushTheButton::.cctor()
 extern void PushTheButton__cctor_m35FCFB914AD4AE0ED2DBBE02A09972285C04522A (void);
-// 0x0000002E System.Void PushTheButton/<>c::.cctor()
+// 0x00000031 System.Void PushTheButton/<>c::.cctor()
 extern void U3CU3Ec__cctor_m612F887A69623C15D952F41F03B0413B97399285 (void);
-// 0x0000002F System.Void PushTheButton/<>c::.ctor()
+// 0x00000032 System.Void PushTheButton/<>c::.ctor()
 extern void U3CU3Ec__ctor_mCE1343E8C264CB25B3E1BBF84A4E0495D1DBFD58 (void);
-// 0x00000030 System.Void PushTheButton/<>c::<.cctor>b__9_0(System.String)
+// 0x00000033 System.Void PushTheButton/<>c::<.cctor>b__9_0(System.String)
 extern void U3CU3Ec_U3C_cctorU3Eb__9_0_mBD9BCA1C34CE69A82F8EF355196556AC072CAE77 (void);
-// 0x00000031 System.Void SpawnableManager::Start()
+// 0x00000034 System.Void SpawnableManager::Start()
 extern void SpawnableManager_Start_mFC8BFB2C5F789510DC84AD28B8BF57D00291CDED (void);
-// 0x00000032 System.Void SpawnableManager::Update()
+// 0x00000035 System.Void SpawnableManager::Update()
 extern void SpawnableManager_Update_m7A9A38650830610C5C81A77D22ABB3A011E23220 (void);
-// 0x00000033 System.Void SpawnableManager::PlaceObject(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.Vector3)
+// 0x00000036 System.Void SpawnableManager::PlaceObject(System.Collections.Generic.List`1<UnityEngine.XR.ARFoundation.ARRaycastHit>,UnityEngine.Vector3)
 extern void SpawnableManager_PlaceObject_m646945159C23E63F47E7CE7C3DF8F3DED6D44BE9 (void);
-// 0x00000034 System.Void SpawnableManager::Scale(System.Single)
+// 0x00000037 System.Void SpawnableManager::Scale(System.Single)
 extern void SpawnableManager_Scale_m2AA550687CE369F76BFC98A88A3ED5CE8A6CC4A3 (void);
-// 0x00000035 System.Collections.Generic.List`1<UnityEngine.GameObject> SpawnableManager::getSpawnedList()
+// 0x00000038 System.Collections.Generic.List`1<UnityEngine.GameObject> SpawnableManager::getSpawnedList()
 extern void SpawnableManager_getSpawnedList_m585C92B7EDE6280C283C069A3C2D1D6580561A3C (void);
-// 0x00000036 System.Void SpawnableManager::.ctor()
+// 0x00000039 System.Void SpawnableManager::.ctor()
 extern void SpawnableManager__ctor_m5E989BEEF4E8A6A12828E117976ED1043ACAA1ED (void);
-static Il2CppMethodPointer s_methodPointers[54] = 
+static Il2CppMethodPointer s_methodPointers[57] = 
 {
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
@@ -147,12 +152,15 @@ static Il2CppMethodPointer s_methodPointers[54] =
 	ARFeatheredPlaneMeshVisualizer__cctor_mF4BA6DDB611A3FD966C8B9494AE6B3EB8647CEAD,
 	BlurRenderer_Start_mA8C7F0DA48BC0DB3F6C0C606115FA9B92DE390F0,
 	BlurRenderer__ctor_m81A7B37303DE32861D66C36A95D01F7CBA1C2A5A,
+	HeartLock_Start_mCE928F32845AF5C26E686B5CE799D29081D9893F,
+	HeartLock_isActive_m6F58A1B99AB7527529C7E8ED3A7AEE7E191E974D,
 	HeartLock_Interact_m8472DE996E0AF932EB4F7CB2DE7366DA86A731FD,
 	HeartLock__ctor_mBBBA62627617E6540C0A1CACAFA07AED857C7A78,
 	InputPanel_setInteractable_m027034DB3725BB2489DDCB52CEFBA2674A1AD8EF,
 	InputPanel_CheckInput_m61B7BF1F8F3D3940D2E8775185FC290A3C7DF401,
 	InputPanel_Update_mE4D9A5A97CA993BCBEA9B77F54AD803FFD389AB1,
 	InputPanel__ctor_m20AB41EFBD0C07FFAD17BBC4940021008D6CE4E5,
+	NULL,
 	NULL,
 	PlayerInput_Start_m13D14749E9E64A1DDBA8E2FCD69CA3CC84BFB576,
 	PlayerInput_HandleInput_m0F3E0E8B5C57382752697FD9E235716275A046A8,
@@ -176,7 +184,7 @@ static Il2CppMethodPointer s_methodPointers[54] =
 	SpawnableManager_getSpawnedList_m585C92B7EDE6280C283C069A3C2D1D6580561A3C,
 	SpawnableManager__ctor_m5E989BEEF4E8A6A12828E117976ED1043ACAA1ED,
 };
-static const int32_t s_InvokerIndices[54] = 
+static const int32_t s_InvokerIndices[57] = 
 {
 	6493,
 	6493,
@@ -205,11 +213,14 @@ static const int32_t s_InvokerIndices[54] =
 	6493,
 	6493,
 	6493,
+	6285,
+	6493,
 	6493,
 	5186,
 	5186,
 	6493,
 	6493,
+	0,
 	0,
 	6493,
 	6493,
@@ -237,7 +248,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	54,
+	57,
 	s_methodPointers,
 	0,
 	NULL,

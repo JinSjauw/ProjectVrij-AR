@@ -109,7 +109,7 @@ public class PlayerInput : MonoBehaviour
     {
         HandleInput();
         CheckForPlanes();
-        debugLog.text = "AR Cam position: " + arCamera.transform.position;
+        //debugLog.text = "AR Cam position: " + arCamera.transform.position;
         
     }
 

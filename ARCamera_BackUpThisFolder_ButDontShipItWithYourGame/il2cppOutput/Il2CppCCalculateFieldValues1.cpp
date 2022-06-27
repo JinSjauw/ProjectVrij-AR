@@ -27572,6 +27572,8 @@ struct HeartLock_t0E0391F318468A71BA54367BA3109CABF4B8DA64  : public MonoBehavio
 {
 	// UnityEngine.GameObject HeartLock::door
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___door_4;
+	// System.Boolean HeartLock::isInteractable
+	bool ___isInteractable_5;
 };
 
 // InputPanel
@@ -35164,9 +35166,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5118[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5119[2] = 
 {
 	static_cast<int32_t>(offsetof(BlurRenderer_tC68F094BD4FB76496BEC4DC223443101B9A08879, ___blurCamera_4)),static_cast<int32_t>(offsetof(BlurRenderer_tC68F094BD4FB76496BEC4DC223443101B9A08879, ___blurMaterial_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5120[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5120[2] = 
 {
-	static_cast<int32_t>(offsetof(HeartLock_t0E0391F318468A71BA54367BA3109CABF4B8DA64, ___door_4)),};
+	static_cast<int32_t>(offsetof(HeartLock_t0E0391F318468A71BA54367BA3109CABF4B8DA64, ___door_4)),static_cast<int32_t>(offsetof(HeartLock_t0E0391F318468A71BA54367BA3109CABF4B8DA64, ___isInteractable_5)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5121[6] = 
 {
 	static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___exitButton_4)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___codeInput_5)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___answer_6)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___debugLog_7)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___interactable_8)),static_cast<int32_t>(offsetof(InputPanel_t702B086258F2A221F3689198945C0FC2663F52A7, ___keyboard_9)),};
