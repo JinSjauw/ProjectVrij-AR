@@ -23,10 +23,14 @@ public class SpawnableManager : MonoBehaviour
         spawnedObject = null;
     }
 
-    public void PlaceObject(List<ARRaycastHit> hitList) 
+    private void Update() {
+        
+    }
+
+    public void PlaceObject(List<ARRaycastHit> hitList, Vector3 position) 
     {
         ARAnchor roomAnchor = anchorManager.AttachAnchor(hitList[0].trackable.GetComponent<ARPlane>(), hitList[0].pose);
-        GameObject gameObject = Instantiate(spawnablePrefab, hitList[0].pose.position, Quaternion.identity);
+        GameObject gameObject = Instantiate(spawnablePrefab, position, Quaternion.identity);
         
         if (gameObject.GetComponent<ARAnchor>() == null) 
         {

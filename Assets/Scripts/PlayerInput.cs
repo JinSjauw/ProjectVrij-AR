@@ -44,7 +44,8 @@ public class PlayerInput : MonoBehaviour
                 if (Input.GetTouch(0).phase == TouchPhase.Began && SpawnableManager.canSpawn)
                 {
                     //debugLog.text = "PLACING OBJECT";
-                    SpawnableManager.PlaceObject(hitList);
+                    SpawnableManager.PlaceObject(hitList, reticle.transform.position);
+                    reticle.SetActive(false);
                 }
             }
             
@@ -55,7 +56,7 @@ public class PlayerInput : MonoBehaviour
                 if(Physics.Raycast(ray, out hitObject, 10f, mask))
                 {   
                     Interactable interactable = hitObject.collider.GetComponent<Interactable>();
-                    if(hitObject.collider.tag == "Lock" && interactable != null)
+                    if(hitObject.collider.tag == "Lock" && interactable != null && interactable.isActive())
                     {
                         InputPanelUI.SetActive(true);
                         InputPanelUI.GetComponent<InputPanel>().setInteractable(interactable);
@@ -98,7 +99,7 @@ public class PlayerInput : MonoBehaviour
             else
             {
                 reticle.transform.position = hitPose.position;
-                debugLog2.text = reticle.transform.position.ToString();
+                //debugLog2.text = reticle.transform.position.ToString();
             }
         }
     }
@@ -108,5 +109,11 @@ public class PlayerInput : MonoBehaviour
     {
         HandleInput();
         CheckForPlanes();
+        debugLog.text = "AR Cam position: " + arCamera.transform.position;
+        
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        debugLog2.text = "Collider: " + other.name;
     }
 }

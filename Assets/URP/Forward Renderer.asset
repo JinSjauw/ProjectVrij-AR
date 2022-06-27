@@ -119,7 +119,7 @@ MonoBehaviour:
   m_AssetVersion: 1
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 471
+    m_Bits: 279
   m_TransparentLayerMask:
     serializedVersion: 2
     m_Bits: 311
